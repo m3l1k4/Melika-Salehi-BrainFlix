@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAA;EACP,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;CAMhB;;AALI,AAAD,kBAAQ,CAAA;EACJ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,OAAO;CAClB",
+    "sources": [
+        "CurrentVid.scss"
+    ],
+    "names": [],
+    "file": "CurrentVid.css"
+}
