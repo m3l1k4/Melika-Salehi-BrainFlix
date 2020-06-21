@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import * as util from "./ListFunctions"
+
 
 export default function CommentsList({ comments }) {
 

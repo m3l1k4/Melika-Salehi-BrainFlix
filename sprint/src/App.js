@@ -11,6 +11,10 @@ import CommentsList from './components/CommentsList'
 
 let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
 
+
+
+
+
  
 class App extends React.Component {
 state ={
@@ -20,6 +24,20 @@ state ={
 }
 
 
+handleSubmit = (event) =>{
+  event.preventDefault();
+  
+  this.setState({comments: [...this.state.comments, {
+    id: this.state.comments.length+1,
+    name: event.target.name.value,
+    comment: event.target.newComment.value,
+    timestamp: Date()
+  }]})
+  let commentVal=event.target.newComment.value;
+  let nameVal=event.target.name.value;
+  postInfo(nameVal,commentVal);
+  event.target.reset();
+}
 
 componentDidMount() {
   axios.get('/SideVideoSeed.json').then(
@@ -41,7 +59,7 @@ render() {
         <NavBar />
         <CurrentVid/>
        <NextVid vids={this.state.content} />
-        <CommentsForm/>
+        <CommentsForm handleSubmit={this.handleSubmit}/>
         <CommentsList comments={this.state.comments}/>
      
        
@@ -54,3 +72,17 @@ render() {
 }
 
 export default App;
+export function postInfo(nameVal, commentVal){
+  axios.post("https://project-1-api.herokuapp.com/comments?api_key=" + api_key,
+      {
+          name: nameVal,
+          comment: commentVal
+      })
+      .then(response => {
+
+      })
+      .catch(error => {
+          console.log(error);
+      })
+
+};
