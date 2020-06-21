@@ -1,23 +1,9 @@
-import React, { useEffect } from "react";
-import './Comments.scss'
-import * as utils from "./Comments";
+import React from 'react'
 
-
-
-export default function Comments() {
-  
-    useEffect(() => {
-        utils.getInfo();
-        //utils.insertComments();
-        //utils.epoch2Human();
-        //utils.postI
-
-        
-      }, []);
-
-    return (
+export default function CommentsForm({handleSubmit}){
+    return(
         <div>
-        <form className="comments-form" id="submit-comments">
+        <form  onSubmit={handleSubmit}className="comments-form" id="submit-comments">
             <div className="comments-form__icon"></div>
             <div className="comments-form__field">
                 <p for="name" className="comments-form__field--title">NAME</p>
@@ -33,7 +19,5 @@ export default function Comments() {
         <div className="previous-comments" id="comments"></div>
 
     </div>
-
     )
 }
-

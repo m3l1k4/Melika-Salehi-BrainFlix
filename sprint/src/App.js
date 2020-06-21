@@ -5,18 +5,19 @@ import './App.css';
 import NavBar from './components/NavBar'
 import CurrentVid from './components/CurrentVid'
 import NextVid from './components/NextVid'
-import Comments from './components/Comments'
+import CommentsForm from './components/CommentsForm'
+import CommentsList from './components/CommentsList'
 
-import { funA, funB } from "./functions";
 
 
 
  
 class App extends React.Component {
 state ={
-  content:[]
-}
+  content:[],
+  comments:[]
 
+}
 
 
 
@@ -24,16 +25,26 @@ componentDidMount() {
   axios.get('/SideVideoSeed.json').then(
     res => this.setState({content: res.data})
   )
-  funA();
-funB();
+
+  axios.get('/CommentsSeed.json').then(
+    res => this.setState({comments: res.data})
+  )
+
 }
+
+
+
 render() {
     return (
       <div className="App">
-        <NavBar handleSubmit={this.handleSubmit} />
+        <NavBar />
         <CurrentVid/>
-        <NextVid vids={this.state.content} />
-        <Comments/>
+       <NextVid vids={this.state.content} />
+        <CommentsForm/>
+        <CommentsList comments={this.state.comments}/>
+     
+       
+
       </div>
 
     );

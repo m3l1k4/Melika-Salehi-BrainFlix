@@ -3,7 +3,7 @@ import './NavBar.scss'
 
 export default function NavBar({ handleSubmit }) {
     return (
-        <form className="NavBar" onSubmit={handleSubmit}>
+        <form className="NavBar">
             <div className="NavBar-Search">
                 <input className="NavBar-Search__field" type="text" placeholder="Search" name="Search" />
                 
