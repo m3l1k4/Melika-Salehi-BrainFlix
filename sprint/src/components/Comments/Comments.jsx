@@ -1,12 +1,20 @@
 import React, { useEffect } from "react";
 import './Comments.scss'
-
+import * as utils from "./Comments";
 
 
 
 export default function Comments() {
   
- 
+    useEffect(() => {
+        utils.getInfo();
+        //utils.insertComments();
+        //utils.epoch2Human();
+        //utils.postI
+
+        
+      }, []);
+
     return (
         <div>
         <form className="comments-form" id="submit-comments">
