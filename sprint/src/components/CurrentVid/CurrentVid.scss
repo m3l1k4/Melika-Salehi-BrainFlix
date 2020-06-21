@@ -1,9 +1,23 @@
 .CurrentVid{
     width: auto;
-    height: 540px;
-    &__bgimg{
+    height: 520px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__player{
         width: 944px;
         height: inherit;
+        margin: 0;
+     
+        &--bgimg{
+            width: 944px;
+            height: 540px;
+            margin: 0;
+            padding:0;
+           
+        }
     }
+ 
 
 }

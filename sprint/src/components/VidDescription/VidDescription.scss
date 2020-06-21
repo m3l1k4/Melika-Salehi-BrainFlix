@@ -1,0 +1,58 @@
+
+.VidDesc{
+    &__Desc{
+        font-size: 14px;
+        line-height: 16px;
+        color: #323232;
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+        margin:0;
+        padding-bottom: 64px;
+    }
+    &__Info{
+        display: flex;
+        border-bottom: 1px solid #e1e1e1;
+        justify-content: space-between;
+        padding-bottom:  24px;
+        margin-bottom: 40px;
+    }
+    &__title{
+        font-size: 36px;
+      margin:0;
+      padding: 24px 0;
+        
+    }
+    &__postInfo{
+        display: flex;
+        font-size: 16px;
+        line-height: 24px;
+       
+        align-items: center;
+        &--channel{
+            margin:0;
+        }
+        &--date{
+            margin:0;
+            padding-left: 8px;
+            color:#afafaf;
+        }
+    }
+
+    &__trendsInfo{
+        display: flex;
+        align-items: center;
+      
+
+        &--icon{
+            margin:0;
+            padding-left: 24px;
+
+        }
+
+        &--text{
+            margin-left: 8px;
+
+        }
+    }
+}

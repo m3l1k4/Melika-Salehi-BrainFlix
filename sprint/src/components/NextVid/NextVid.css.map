@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACK,AAAD,mBAAY,CAAA;EACR,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "NextVid.scss"
+    ],
+    "names": [],
+    "file": "NextVid.css"
+}

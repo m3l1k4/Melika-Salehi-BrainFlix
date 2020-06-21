@@ -1,10 +1,28 @@
 .CurrentVid {
   width: auto;
-  height: 540px;
+  height: 520px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.CurrentVid__bgimg {
+.CurrentVid__player {
   width: 944px;
   height: inherit;
+  margin: 0;
+}
+
+.CurrentVid__player--bgimg {
+  width: 944px;
+  height: 540px;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=CurrentVid.css.map */
