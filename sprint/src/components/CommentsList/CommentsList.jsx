@@ -2,19 +2,13 @@ import React, {useEffect} from 'react'
 import * as util from "./ListFunctions"
 
 export default function CommentsList({ comments }) {
- /*
-  let rValthis= useEffect(()=>{
-    let rVal= util.epoch2Human("noot");
-    return rVal
-}, []); */
-
 
     return (
         comments.map(comment => {
             return <div key={comment.id} className="Comments">
-                {epoch2Human(comment.timestamp)}
-                <h2 className="Comments__name"> {comment.name}</h2>
-                <h2 className="Comments__time">  {epoch2Human(comment.timestamp)}</h2>
+                
+                <p className="Comments__name"> {comment.name}</p>
+                <p className="Comments__time">  {epoch2Human(comment.timestamp)}</p>
                 <p className="Comments__body"> {comment.comment}</p>
 
             </div>
