@@ -9,7 +9,7 @@ import CommentsForm from './components/CommentsForm'
 import CommentsList from './components/CommentsList'
 
 
-
+let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
 
  
 class App extends React.Component {
@@ -26,9 +26,10 @@ componentDidMount() {
     res => this.setState({content: res.data})
   )
 
-  axios.get('/CommentsSeed.json').then(
-    res => this.setState({comments: res.data})
+  axios.get("https://project-1-api.herokuapp.com/comments?api_key=" + api_key)
+  .then( res => this.setState({comments: res.data})
   )
+
 
 }
 
