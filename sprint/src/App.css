@@ -2,10 +2,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 120px;
+  margin: 0 80px;
 }
 
 .App__bottom--left {
+  width: 712px;
   margin-right: 24px;
 }
 
@@ -17,5 +18,13 @@
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+}
+
+.App__bottom--right {
+  padding-top: 40px;
+}
+
+.App__bottom--right__header {
+  font-size: 16px;
 }
 /*# sourceMappingURL=App.css.map */

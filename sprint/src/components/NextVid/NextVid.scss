@@ -1,7 +1,23 @@
 .NextVid{
+ display: flex;
+ flex-direction: row-reverse;
+justify-content: space-between;
+align-items: center;
+    &__info{
+        margin-left: 16px;
+        &--title{
+            font-size: 14px;
+        }
+        &--channel{
+            font-size: 12px;
+            color:#afafaf;
+        }
+    }
     &__thumbnail{
         width: 120px;
         height: 70px;
+        border-radius: 4px;
+        align-self: center;
     }
 
 }

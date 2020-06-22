@@ -3,13 +3,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   padding-bottom: 24px;
   border-bottom: solid 1px #e1e1e1;
   width: 712px;
-  padding-right: 55px;
 }
 
 .comments-form__icon {
@@ -18,6 +14,7 @@
   height: 48px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin-right: 24px;
 }
 
 .comments-form__field {
@@ -40,6 +37,7 @@
   border: 0px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin-left: 16px;
   width: 160px;
   height: 48px;
 }
@@ -62,119 +60,5 @@
   font-size: 14px;
   line-height: 20px;
   resize: none;
-}
-
-.Comments {
-  font-size: 14px;
-  line-height: 20px;
-  padding-top: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Comments__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  border-bottom: solid 1px #e1e1e1;
-  padding-bottom: 24px;
-  width: auto;
-  height: auto;
-}
-
-@media (min-width: 320px) {
-  .Comments__div {
-    width: 224px;
-  }
-}
-
-@media (min-width: 768px) {
-  .Comments__div {
-    width: 712px;
-  }
-}
-
-.Comments__heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  height: auto;
-}
-
-@media (min-width: 320px) {
-  .Comments__heading {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-@media (min-width: 768px) {
-  .Comments__heading {
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-  }
-}
-
-.Comments__heading--time {
-  color: #afafaf;
-  font-family: "Avenir-Next-light";
-  padding-left: 1rem;
-}
-
-.Comments__heading--name {
-  color: #323232;
-  font-family: "Avenir-Next-Medium";
-}
-
-@media (min-width: 320px) {
-  .Comments__heading--name {
-    font-size: 14px;
-    line-height: 22px;
-    margin: 0;
-  }
-}
-
-.Comments__icon {
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: silver;
-  -ms-flex-item-align: start;
-      align-self: start;
-  width: 40px;
-  height: 40px;
-  margin-right: 16px;
-  margin-top: 12px;
-}
-
-.Comments__comment {
-  font-family: "Avenir-Next-Light";
-  margin: 0;
 }
 /*# sourceMappingURL=CommentsForm.css.map */

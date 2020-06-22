@@ -71,7 +71,7 @@ class App extends React.Component {
           </div>
 
           <div className="App__bottom--right">
-
+      <h2 className="App__bottom--right__header">NEXT VIDEO</h2>
             <NextVid vids={this.state.content} />
           </div>
         </div>

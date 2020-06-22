@@ -4,10 +4,10 @@
 .App{
   &__bottom{
     display: flex;
-    margin: 0 120px;
+    margin: 0 80px;
 
     &--left{
-      
+      width: 712px;
       margin-right: 24px;
 
       &__comments{
@@ -15,6 +15,15 @@
        flex-direction: column-reverse;
       }
     }
+
+    &--right{
+      padding-top: 40px;
+      &__header{
+        font-size: 16px;
+      }
+    }
+
+  
          
   }   
 }

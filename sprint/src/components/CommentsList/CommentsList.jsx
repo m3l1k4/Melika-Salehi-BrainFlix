@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-
+import './CommentsList.scss'
 
 export default function CommentsList({ comments }) {
 
