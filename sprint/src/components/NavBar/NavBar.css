@@ -1,21 +1,153 @@
-.NavBar-Search__field {
-  color: red;
+@font-face {
+  font-family: 'Avenir-Next-Bold';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
 }
 
-.NavBar-Search__button {
-  background-color: red;
+@font-face {
+  font-family: 'Avenir-Next-BoldIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-BoldIt.otf");
 }
 
-.NavBar-Search__icon {
+@font-face {
+  font-family: 'Avenir-Next-Demi';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-DemiIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-DemiIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Heavy';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-HeavyIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-HeavyIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-It';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-It.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Light';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-LightIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-LightIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Medium';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-MediumIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-MediumIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Regular';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Thin';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-ThinIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-ThinIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLtIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLtIt.otf");
+}
+
+.NavBar {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 1200px) {
+  .NavBar {
+    margin-bottom: 24px;
+    margin-top: 24px;
+    margin-left: 120px;
+    margin-right: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.NavBar__Search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NavBar__Search--field {
+  border: 1px solid #e1e1e1;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  height: 40px;
+  width: 254px;
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.NavBar__Search--button {
+  background-color: #0095FF;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  outline: none;
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.NavBar__Search--upload {
+  padding: 4px;
+}
+
+.NavBar__Search--icon {
   border-radius: 50%;
   width: 48px;
   height: 48px;
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-  border: solid 1px black;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=NavBar.css.map */

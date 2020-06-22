@@ -1,4 +1,6 @@
-@import './src/mixins.scss';
+@import "../../mixins.scss";
+@import "../../fonts.scss";
+
 .NavBar{
     @include desktop{
         margin-bottom: 24px; 

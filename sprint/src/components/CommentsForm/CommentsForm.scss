@@ -1,4 +1,5 @@
-@import "./mixins.scss";
+@import "../../mixins.scss";
+@import "../../fonts.scss";
 
 .comments-form {
     background-color: #ffffff;
@@ -34,7 +35,7 @@ margin-left: 16px;
             height: 48px;
         }
         &--title {
-            font-family: "Avenir-Next-Demi";
+            font-family: "Avenir-Next-Bold";
             color: #afafaf;
             font-size: 14px;
             line-height: 22px;
