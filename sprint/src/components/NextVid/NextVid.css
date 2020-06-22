@@ -96,14 +96,6 @@
           justify-content: flex-end;
 }
 
-@media (min-width: 1200px) {
-  .NextVid {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
 .NextVid__info {
   color: #323232;
   margin-left: 16px;

@@ -8,11 +8,6 @@ height: 70px;
 padding-bottom: 24px;
 justify-content: flex-end;
 
-@include desktop{
-    justify-content: space-between;
-
-}
-
 
 
     &__info{
