@@ -2,13 +2,25 @@
 @import "../../fonts.scss";
 .CurrentVid{
     width: auto;
-    height: 520px;
+    @include tablet{
+        height: 400px;
+    }
+    @include desktop{
+        height: 520px;  
+    }
+  
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     &__player{
-        width: 944px;
+        @include tablet{
+            width: 700px;
+        }
+        @include desktop{
+             width: 944px;   
+        }
+    
         height: inherit;
         margin: 0;
      

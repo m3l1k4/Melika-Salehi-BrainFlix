@@ -80,7 +80,6 @@
 
 .CurrentVid {
   width: auto;
-  height: 520px;
   background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,10 +92,33 @@
           justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .CurrentVid {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .CurrentVid {
+    height: 520px;
+  }
+}
+
 .CurrentVid__player {
-  width: 944px;
   height: inherit;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .CurrentVid__player {
+    width: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .CurrentVid__player {
+    width: 944px;
+  }
 }
 
 .CurrentVid__player--bgimg {

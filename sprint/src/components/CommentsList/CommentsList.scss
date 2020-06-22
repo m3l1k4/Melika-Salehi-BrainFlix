@@ -78,5 +78,13 @@
         font-family: "Avenir-Next-Light";
         margin: 0;
        flex-wrap: wrap;
+       @include tablet{
+         width: 624px;  
+       }
+       
+
+       
+
+       
     }
 }

@@ -3,8 +3,19 @@
 .NextVid{
  display: flex;
  flex-direction: row-reverse;
-justify-content: space-between;
 align-items: center;
+
+@include tablet{
+    justify-content: flex-end;
+    padding-bottom: 24px;
+}
+@include desktop{
+    justify-content: space-between;
+ 
+}
+
+
+
     &__info{
         color: #323232;
         margin-left: 16px;
