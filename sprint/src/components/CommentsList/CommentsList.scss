@@ -3,14 +3,14 @@
 .Comments {
     font-size: 14px;
     line-height: 20px;
-   padding-top: 12px;
+    padding-top: 12px;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-content: center;
     align-items: center;
     border-bottom: solid 1px #e1e1e1;
-   
+
     &__box {
         display: flex;
         flex-direction: row;
@@ -77,14 +77,9 @@
     &__comment {
         font-family: "Avenir-Next-Light";
         margin: 0;
-       flex-wrap: wrap;
-       @include tablet{
-         width: 624px;  
-       }
-       
-
-       
-
-       
+        flex-wrap: wrap;
+        @include tablet {
+            width: 624px;
+        }
     }
 }

@@ -47,18 +47,17 @@
         @include mobile {
             font-size: 24px;
             margin-bottom: 16px;
-            
         }
 
         @include tablet {
             font-size: 36px;
-           
-        margin-bottom: 24px;
-        margin-top: 48px;
+
+            margin-bottom: 24px;
+            margin-top: 48px;
         }
 
         @include desktop {
-            margin-top:40px;
+            margin-top: 40px;
         }
 
         font-family: "Avenir-Next-Bold";
@@ -86,11 +85,11 @@
 
     &__trendsInfo {
         display: flex;
-  align-items: baseline;
-    
-@include desktop{
-    margin-right: 32px;
-}
+        align-items: baseline;
+
+        @include desktop {
+            margin-right: 32px;
+        }
         &--icon {
             margin: 0;
             @include tablet {
@@ -104,7 +103,7 @@
             @include mobile {
                 margin-right: 24px;
             }
-            @include tablet{
+            @include tablet {
                 margin-right: 0;
             }
         }

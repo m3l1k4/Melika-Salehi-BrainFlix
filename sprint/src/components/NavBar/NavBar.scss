@@ -4,12 +4,10 @@
 
 .NavBar {
     display: flex;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
     @include mobile {
-      
         justify-content: center;
         margin-bottom: 16px;
-    
     }
     @include tablet {
         flex-wrap: nowrap;
@@ -24,11 +22,10 @@
         margin-right: 120px;
     }
 
-    &__logo{
-        @include mobile{
-           margin: 12px 0;    
+    &__logo {
+        @include mobile {
+            margin: 12px 0;
         }
-     
     }
     &__Search {
         display: flex;
@@ -76,7 +73,6 @@
                 justify-content: center;
                 font-size: 16px;
                 width: 224px;
-                
             }
 
             @include tablet {
@@ -87,7 +83,6 @@
         }
 
         &--upload {
-           
             margin-right: 8px;
         }
 
@@ -102,5 +97,3 @@
         }
     }
 }
-
-

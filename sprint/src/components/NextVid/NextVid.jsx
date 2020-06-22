@@ -3,7 +3,7 @@ import './NextVid.scss'
 
 export default function NextVid({ vids }) {
     return (
-        
+
         vids.map(vid => {
             return <div key={vid.id} className="NextVid">
                 <div className="NextVid__info">

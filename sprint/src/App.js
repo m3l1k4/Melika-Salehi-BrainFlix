@@ -30,7 +30,7 @@ class App extends React.Component {
     this.setState({
       comments: [...this.state.comments, {
         id: this.state.comments.length + 1,
-        name:"Mohan Muruge",
+        name: "Mohan Muruge",
         comment: event.target.newComment.value,
         timestamp: Date()
       }]
@@ -65,13 +65,13 @@ class App extends React.Component {
             <VidDescription />
             <CommentsForm handleSubmit={this.handleSubmit} />
             <div className="App__bottom--left__comments">
-                  <CommentsList comments={this.state.comments} />
+              <CommentsList comments={this.state.comments} />
             </div>
-        
+
           </div>
 
           <div className="App__bottom--right">
-      <h2 className="App__bottom--right__header">NEXT VIDEO</h2>
+            <h2 className="App__bottom--right__header">NEXT VIDEO</h2>
             <NextVid vids={this.state.content} />
           </div>
         </div>
