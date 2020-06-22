@@ -1,5 +1,6 @@
 @import "../../mixins.scss";
 @import "../../fonts.scss";
+//@import "../../../public/assets/Images/Mohan-muruge.jpg";
 
 .NavBar {
     display: flex;
@@ -94,7 +95,6 @@
             border-radius: 50%;
             width: 48px;
             height: 48px;
-            background-image: url('/assets/Images/Mohan-muruge.jpg');
             background-position: left;
             background-size: cover;
             background-repeat: no-repeat;
@@ -102,3 +102,5 @@
         }
     }
 }
+
+
