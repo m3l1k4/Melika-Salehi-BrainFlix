@@ -51,7 +51,15 @@
         color: #afafaf;
         font-family: "Avenir-Next-Medium";
         margin-bottom: 40px;
-        margin-top: 0;
+        
+
+        @include mobile{
+          margin-top: 40px;
+        }
+
+        @include tablet{
+          margin-top: 0;
+        }
       }
     }
   }

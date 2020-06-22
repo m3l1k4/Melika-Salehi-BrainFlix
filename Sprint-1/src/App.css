@@ -146,6 +146,17 @@
   color: #afafaf;
   font-family: "Avenir-Next-Medium";
   margin-bottom: 40px;
-  margin-top: 0;
+}
+
+@media (min-width: 320px) {
+  .App__bottom--right__header {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .App__bottom--right__header {
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=App.css.map */
