@@ -4,14 +4,13 @@
  display: flex;
  flex-direction: row-reverse;
 align-items: center;
+height: 70px;
+padding-bottom: 24px;
+justify-content: flex-end;
 
-@include tablet{
-    justify-content: flex-end;
-    padding-bottom: 24px;
-}
 @include desktop{
     justify-content: space-between;
- 
+
 }
 
 
