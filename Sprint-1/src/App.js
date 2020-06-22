@@ -1,6 +1,5 @@
 import React from "react";
 import axios from 'axios'
-//import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar'
 import CurrentVid from './components/CurrentVid'
@@ -10,11 +9,6 @@ import CommentsList from './components/CommentsList'
 import VidDescription from './components/VidDescription'
 
 let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
-
-
-
-
-
 
 class App extends React.Component {
   state = {
@@ -51,8 +45,6 @@ class App extends React.Component {
 
 
   }
-
-
 
   render() {
     return (
