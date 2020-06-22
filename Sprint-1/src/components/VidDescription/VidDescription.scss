@@ -84,7 +84,7 @@
 
     &__trendsInfo {
         display: flex;
-        align-items: baseline;
+        align-items:center;
 
         @include desktop {
             margin-right: 32px;
@@ -99,6 +99,9 @@
         &--text {
             margin-left: 8px;
             margin-top: 0;
+            margin-bottom: 0;
+            font-family: "Avenir-Next-Light";
+        
             @include mobile {
                 margin-right: 24px;
             }
