@@ -4,9 +4,10 @@
     background-color: #ffffff;
     display: flex;
     justify-content: space-evenly;
-padding-bottom: 24px;
+    padding-bottom: 24px;
     border-bottom: solid 1px #e1e1e1;
     width: 712px;
+    padding-right: 55px;
     &__icon {
         border-radius: 50%;
         width: 48px;
@@ -18,16 +19,14 @@ padding-bottom: 24px;
         display: flex;
         flex-direction: column;
 
-        
-
         &--button {
-            background-color:#0095ff;
+            background-color: #0095ff;
             color: #ffffff;
             font-family: "Avenir-Next-Demi";
             border-radius: 4px;
             font-size: 16px;
             line-height: 24px;
-            
+
             border: 0px;
             align-self: flex-end;
 
@@ -52,5 +51,86 @@ padding-bottom: 24px;
             line-height: 20px;
             resize: none;
         }
+    }
+}
+
+.Comments {
+    font-size: 14px;
+    line-height: 20px;
+   padding-top: 12px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    &__box {
+        display: flex;
+        flex-direction: row;
+        border-bottom: solid 1px #e1e1e1;
+
+        padding-bottom: 24px;
+
+        width: auto;
+        height: auto;
+    }
+
+    &__div {
+        @include mobile {
+            width: 224px;
+        }
+
+        @include tablet {
+            width: 712px;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        align-items: baseline;
+        height: auto;
+
+        @include mobile {
+            justify-content: space-between;
+        }
+        @include tablet {
+            justify-content: left;
+        }
+
+        &--time {
+            color: #afafaf;
+            font-family: "Avenir-Next-light";
+            padding-left: 1rem;
+        }
+
+        &--name {
+            color: #323232;
+            font-family: "Avenir-Next-Medium";
+
+            @include mobile {
+                font-size: 14px;
+                line-height: 22px;
+                margin: 0;
+            }
+        }
+    }
+
+    &__icon {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        background-color: silver;
+        align-self: start;
+        width: 40px;
+        height: 40px;
+        margin-right: 16px;
+        margin-top: 12px;
+        @include mobile {
+        }
+    }
+
+    &__comment {
+        font-family: "Avenir-Next-Light";
+        margin: 0;
     }
 }

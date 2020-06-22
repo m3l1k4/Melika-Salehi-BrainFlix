@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 
 
 export default function CommentsList({ comments }) {
@@ -6,10 +6,22 @@ export default function CommentsList({ comments }) {
     return (
         comments.map(comment => {
             return <div key={comment.id} className="Comments">
-                
-                <p className="Comments__name"> {comment.name}</p>
-                <p className="Comments__time">  {epoch2Human(comment.timestamp)}</p>
-                <p className="Comments__body"> {comment.comment}</p>
+
+
+
+                <div className="Comments__box">
+                    <div className="Comments__icon"></div>
+                    <div className="Comments__div">
+                        <div>
+                            <div className="Comments__heading">
+                                <p className="Comments__heading--name"> {comment.name}</p>
+                                <p className="Comments__heading--time">  {epoch2Human(comment.timestamp)}</p>
+                            </div>
+                            <p className="Comments__comment"> {comment.comment}</p>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         })
@@ -17,16 +29,15 @@ export default function CommentsList({ comments }) {
 }
 
 export function epoch2Human(timeStampString) {
-    
-   
-        let currentTime = new Date(timeStampString);
-        let timeString = '';
-        let timeDay = currentTime.getDate();
-       let  timeYear = currentTime.getFullYear();
-       let timeMonth = currentTime.getMonth();
-        let timeValue = timeString.concat(timeMonth, '/', timeDay, '/', timeYear);
-        console.log(timeValue);
-        return timeValue;
-    
-    }
-    
+
+
+    let currentTime = new Date(timeStampString);
+    let timeString = '';
+    let timeDay = currentTime.getDate();
+    let timeYear = currentTime.getFullYear();
+    let timeMonth = currentTime.getMonth();
+    let timeValue = timeString.concat(timeMonth, '/', timeDay, '/', timeYear);
+    console.log(timeValue);
+    return timeValue;
+
+}

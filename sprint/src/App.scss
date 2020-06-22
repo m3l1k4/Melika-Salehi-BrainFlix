@@ -9,6 +9,11 @@
     &--left{
       
       margin-right: 24px;
+
+      &__comments{
+        display: flex;
+       flex-direction: column-reverse;
+      }
     }
          
   }   

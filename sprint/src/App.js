@@ -64,7 +64,10 @@ class App extends React.Component {
           <div className="App__bottom--left">
             <VidDescription />
             <CommentsForm handleSubmit={this.handleSubmit} />
-            <CommentsList comments={this.state.comments} />
+            <div className="App__bottom--left__comments">
+                  <CommentsList comments={this.state.comments} />
+            </div>
+        
           </div>
 
           <div className="App__bottom--right">
