@@ -6,9 +6,6 @@ export default function CommentsList({ comments }) {
     return (
         comments.map(comment => {
             return <div key={comment.id} className="Comments">
-
-
-
                 <div className="Comments__box">
                     <div className="Comments__icon"></div>
                     <div className="Comments__div">
@@ -29,8 +26,7 @@ export default function CommentsList({ comments }) {
 }
 
 export function epoch2Human(timeStampString) {
-
-
+    
     let currentTime = new Date(timeStampString);
     let timeString = '';
     let timeDay = currentTime.getDate();
