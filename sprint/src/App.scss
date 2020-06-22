@@ -5,7 +5,13 @@
 }
 .App{
 
- 
+@include mobile{
+  margin: 0 16px;
+} 
+
+@include tablet{
+  margin: 0;
+}
   &__bottom{
     
     @include desktop{
@@ -35,6 +41,10 @@
     }
 
     &--right{
+      @include mobile{
+
+   
+      }
       @include tablet{
         padding-top: 40px;
         margin-left: 24px;

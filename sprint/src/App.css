@@ -82,6 +82,18 @@
   margin: 0;
 }
 
+@media (min-width: 320px) {
+  .App {
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .App {
+    margin: 0;
+  }
+}
+
 @media (min-width: 1200px) {
   .App__bottom {
     margin: 0 80px;

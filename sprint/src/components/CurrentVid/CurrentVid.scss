@@ -1,7 +1,10 @@
 @import "../../mixins.scss";
 @import "../../fonts.scss";
 .CurrentVid{
-    width: auto;
+    width: 100%;
+    @include mobile{
+        height: 183px;
+    }
     @include tablet{
         height: 400px;
     }
@@ -14,6 +17,9 @@
     align-items: center;
     justify-content: center;
     &__player{
+        @include mobile{
+            width: 100%;
+        }
         @include tablet{
             width: 700px;
         }
@@ -25,8 +31,7 @@
         margin: 0;
      
         &--bgimg{
-            width: 944px;
-            height: 540px;
+            
             margin: 0;
             padding:0;
            
