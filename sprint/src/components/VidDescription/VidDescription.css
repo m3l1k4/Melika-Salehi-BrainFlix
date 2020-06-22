@@ -1,7 +1,11 @@
-.VidDesc__Desc {
-  font-size: 14px;
-  line-height: 16px;
+.VidDesc {
   color: #323232;
+}
+
+.VidDesc__Desc {
+  font-family: 'Avenir-Next-Light';
+  font-size: 16px;
+  line-height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,6 +17,7 @@
 }
 
 .VidDesc__Info {
+  font-family: 'Avenir-Next-Demi';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,6 +33,7 @@
   font-size: 36px;
   margin: 0;
   padding: 24px 0;
+  font-family: 'Avenir-Next-Bold';
 }
 
 .VidDesc__postInfo {
@@ -58,6 +64,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 32px;
 }
 
 .VidDesc__trendsInfo--icon {

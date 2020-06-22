@@ -88,6 +88,11 @@
   width: 712px;
 }
 
+.comments-form__header {
+  font-family: 'Avenir-Next-Demi';
+  font-size: 16px;
+}
+
 .comments-form__icon {
   border-radius: 50%;
   width: 48px;
@@ -107,6 +112,11 @@
           flex-direction: column;
 }
 
+.comments-form__field textarea:focus {
+  border: 2px solid #0095ff;
+  outline: none;
+}
+
 .comments-form__field--button {
   background-color: #0095ff;
   color: #ffffff;
@@ -123,7 +133,7 @@
 }
 
 .comments-form__field--title {
-  font-family: "Avenir-Next-Bold";
+  font-family: "Avenir-Next-Demi";
   color: #afafaf;
   font-size: 14px;
   line-height: 22px;

@@ -1,9 +1,10 @@
-
+//@import "../../fonts.scss";
 .VidDesc{
+    color: #323232;
     &__Desc{
-        font-size: 14px;
-        line-height: 16px;
-        color: #323232;
+        font-family: 'Avenir-Next-Light';
+        font-size: 16px;
+        line-height: 24px;
         display: flex;
         flex-wrap: wrap;
         width: 75%;
@@ -11,6 +12,7 @@
         padding-bottom: 64px;
     }
     &__Info{
+        font-family: 'Avenir-Next-Demi';
         display: flex;
         border-bottom: 1px solid #e1e1e1;
         justify-content: space-between;
@@ -21,6 +23,8 @@
         font-size: 36px;
       margin:0;
       padding: 24px 0;
+      font-family: 'Avenir-Next-Bold';
+      
         
     }
     &__postInfo{
@@ -42,6 +46,7 @@
     &__trendsInfo{
         display: flex;
         align-items: center;
+        margin-right: 32px;
       
 
         &--icon{

@@ -9,7 +9,7 @@
     &--left{
       width: 712px;
       margin-right: 24px;
-
+      border-right: solid 1px #e1e1e1;
       &__comments{
         display: flex;
        flex-direction: column-reverse;
@@ -19,7 +19,11 @@
     &--right{
       padding-top: 40px;
       &__header{
-        font-size: 16px;
+        font-size: 14px;
+        color: #afafaf;
+        font-family: 'Avenir-Next-Medium';
+        margin-bottom: 40px;
+        margin-top: 0;
       }
     }
 

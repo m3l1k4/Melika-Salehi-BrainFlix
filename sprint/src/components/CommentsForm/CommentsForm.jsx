@@ -4,7 +4,7 @@ import './CommentsForm.scss'
 export default function CommentsForm({ handleSubmit }) {
     return (
         <div className="coments-form">
-            <h3 className="comments-form-header"> 3 Comments</h3>
+            <h3 className="comments-form__header"> 3 Comments</h3>
 
             <form onSubmit={handleSubmit} className="comments-form" id="submit-comments">
             <img src='/assets/Images/Mohan-muruge.jpg' className="comments-form__icon"></img>
