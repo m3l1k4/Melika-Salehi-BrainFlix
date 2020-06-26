@@ -1,0 +1,112 @@
+@import "../../mixins.scss";
+@import "../../fonts.scss";
+.CurrentVid {
+    position: relative;
+    width: 100%;
+    @include mobile {
+        height: 183px;
+    }
+    @include tablet {
+        height: 400px;
+    }
+    @include desktop {
+        height: 520px;
+    }
+
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__player {
+        @include mobile {
+            width: 100%;
+        }
+        @include tablet {
+            width: 700px;
+        }
+        @include desktop {
+            width: 944px;
+        }
+
+        height: inherit;
+        margin: 0;
+    }
+
+    &__components {
+        display: flex;
+
+        position: relative;
+        height: 0;
+        bottom: 48px;
+
+        &--play {
+            display: flex;
+            justify-content: center;
+            box-shadow: inset 0 0 0 1000px rgba(19.6, 19.6, 19.6, 0.5);
+            border-radius: 4px;
+            width: 48px;
+            height: 32px;
+        }
+
+        &--slider {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #e1e1e1;
+
+            height: 32px;
+            box-shadow: inset 0 0 0 1000px rgba(19.6, 19.6, 19.6, 0.5);
+
+            @include mobile {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+            @include tablet {
+                margin-left: 16px;
+                margin-right: 16px;
+            }
+
+            border-radius: 4px;
+            @include mobile {
+                width: 120px;
+            }
+            @include tablet {
+                width: 519px;
+            }
+            @include desktop {
+                width: 751px;
+            }
+
+            &__line {
+                width: 700px;
+                height: 2px;
+                background-color: black;
+
+                margin: 0 16px;
+            }
+
+            &__time {
+                margin-right: 16px;
+
+                @include mobile {
+                    display: none;
+                }
+
+                @include tablet {
+                    display: block;
+                }
+            }
+        }
+        &--rcontrols {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 16px;
+            box-shadow: inset 0 0 0 1000px rgba(19.6, 19.6, 19.6, 0.5);
+            border-radius: 4px;
+            width: 48px;
+            height: 32px;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+@font-face {
+  font-family: 'Avenir-Next-Bold';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-BoldIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-BoldIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Demi';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-DemiIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-DemiIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Heavy';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-HeavyIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-HeavyIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-It';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-It.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Light';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-LightIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-LightIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Medium';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-MediumIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-MediumIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Regular';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Thin';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-ThinIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-ThinIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLtIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLtIt.otf");
+}
+
+.comments-form {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 24px;
+  border-bottom: solid 1px #e1e1e1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 320px) {
+  .comments-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-form {
+    width: 712px;
+  }
+}
+
+.comments-form__header {
+  font-family: "Avenir-Next-Demi";
+  font-size: 16px;
+}
+
+@media (min-width: 320px) {
+  .comments-form__header {
+    margin-bottom: 32px;
+  }
+}
+
+.comments-form__icon {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+@media (min-width: 320px) {
+  .comments-form__icon {
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-form__icon {
+    margin-right: 24px;
+  }
+}
+
+.comments-form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 320px) {
+  .comments-form__field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-form__field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.comments-form__field textarea:focus {
+  border: 2px solid #0095ff;
+  outline: none;
+}
+
+.comments-form__field--button {
+  background-color: #0095ff;
+  color: #ffffff;
+  font-family: "Avenir-Next-Demi";
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  border: 0px;
+}
+
+@media (min-width: 320px) {
+  .comments-form__field--button {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    width: 224px;
+    margin-left: 64px;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-form__field--button {
+    margin-left: 16px;
+    width: 160px;
+  }
+}
+
+.comments-form__field--title {
+  font-family: "Avenir-Next-Demi";
+  color: #afafaf;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.comments-form__field--comment {
+  border: 1px solid #afafaf;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  line-height: 20px;
+  resize: none;
+}
+
+@media (min-width: 320px) {
+  .comments-form__field--comment {
+    width: 224px;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-form__field--comment {
+    width: 436px;
+  }
+}
+/*# sourceMappingURL=CommentsForm.css.map */
