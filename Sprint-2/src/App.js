@@ -8,12 +8,15 @@ import CommentsForm from './components/CommentsForm'
 import CommentsList from './components/CommentsList'
 import VidDescription from './components/VidDescription'
 
-let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
+//let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
+
+let api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
 
 class App extends React.Component {
   state = {
     content: [],
     comments: []
+   
 
   }
 
@@ -35,16 +38,23 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/SideVideoSeed.json').then(
-      res => this.setState({ content: res.data })
-    )
 
-    axios.get("https://project-1-api.herokuapp.com/comments?api_key=" + api_key)
-      .then(res => this.setState({ comments: res.data })
+        axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + api_key)
+      .then(res => this.setState({ content: res.data })
       )
+    
+    
+    }
+    // axios.get('/SideVideoSeed.json').then(
+    //   res => this.setState({ content: res.data })
+    // )
+
+    // axios.get("https://project-1-api.herokuapp.com/comments?api_key=" + api_key)
+    //   .then(res => this.setState({ comments: res.data })
+    //   )
 
 
-  }
+  
 
   render() {
     return (
