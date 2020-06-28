@@ -16,6 +16,7 @@ let api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
 class App extends React.Component {
   state = {
     content: [],
+    currentvid:[],
     comments: []
 
 
@@ -45,7 +46,21 @@ class App extends React.Component {
       )
 
 
+      axios.get("https://project-2-api.herokuapp.com/videos/1aivjruutn6a/?api_key=" + api_key)
+      .then(res => this.setState({ currentvid: res.data })
+      )
+
+
+    
+
   }
+
+  
+componentDidUpdate(){
+
+
+}
+
 
   render() {
     return (
@@ -61,12 +76,12 @@ class App extends React.Component {
                 <UploadForm />
               </Route>
               <Route path="/home">
-                <CurrentVid vid={this.state.content} />
+                <CurrentVid vid={this.state.currentvid} />
         
 
                 <div className="App__bottom">
                   <div className="App__bottom--left">
-                    <VidDescription />
+                    <VidDescription  />
                     <CommentsForm handleSubmit={this.handleSubmit} />
                     <div className="App__bottom--left__comments">
                       <CommentsList comments={this.state.comments} />

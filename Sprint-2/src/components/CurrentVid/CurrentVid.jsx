@@ -4,11 +4,12 @@ import './CurrentVid.scss'
 export default function CurrentVid({ vid }) {
    
   console.log(vid[1])
+  console.log("this is vid1")
     return (
     
         <div className="CurrentVid">
         
-            <video className="CurrentVid__player" >
+            <video className="CurrentVid__player" poster={vid.image} >
 
             <img />
             </video>
