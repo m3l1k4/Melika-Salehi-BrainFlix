@@ -43,9 +43,14 @@ class App extends React.Component {
       )
 
 
-    axios.get(`https://project-2-api.herokuapp.com/videos/${this.state.currentvid.id}/?api_key=${api_key}`)
+    axios.get(`https://project-2-api.herokuapp.com/videos/1aivjruutn6a/?api_key=` + api_key)
       .then(res => this.setState({ currentvid: res.data })
       )
+
+
+    //   axios.get(`https://project-2-api.herokuapp.com/videos/${this.state.currentvid.id}/?api_key=` + api_key)
+    //   .then(res => this.setState({ currentvid: res.data })
+    //   )
 
 
 
@@ -56,7 +61,7 @@ class App extends React.Component {
   componentDidUpdate(previous) {
 
 console.log(this.state.currentvid.id)
-console.log(window.location.pathname)
+console.log(this.props.match.params.id)
 console.log("update")
 
   }
@@ -68,13 +73,7 @@ console.log("update")
         <BrowserRouter>
          
           <Router>
-
-       
-
             <Switch>
-              <Route exact path="/upload" component={UploadForm}>
-                <UploadForm />
-              </Route>
               <Route path="/:id" >
 
              
