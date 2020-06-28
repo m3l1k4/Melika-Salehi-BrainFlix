@@ -60,17 +60,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NavBar />
-
-
-
         <BrowserRouter>
+          <NavBar />
           <Router>
-  
-            <Link to='/upload'>One</Link>
-            <Link to='/home'>Two</Link>
+
+            <Link to='/home'  >Two</Link>
+
             <Switch>
-              <Route path="/upload" component={UploadForm}>
+              <Route exact path="/upload" component={UploadForm}>
                 <UploadForm />
               </Route>
               <Route path="/home">
@@ -91,8 +88,6 @@ class App extends React.Component {
                     <NextVid vids={this.state.content} />
                   </div>
                 </div>
-
-
               </Route>
 
             </Switch>
