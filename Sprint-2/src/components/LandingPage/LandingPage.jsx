@@ -53,15 +53,27 @@ class App extends React.Component {
 
   componentDidUpdate(previous) {
 let prev=this.state.currentvid.id;
+console.log(prev)
+console.log("this is prev")
 let next =this.props.match.params.id;
 
     let idindex=this.state.content.findIndex( vid =>{
 
         console.log(vid.id)
         console.log("this is vid id")
-        console.log(this.props.match.params.id)
-        return this.props.match.params.id == vid.id 
+        console.log(prev)
+        return prev == vid.id 
   });
+
+this.state.content.push(this.state.currentvid);
+this.state.content.splice(idindex,1);
+console.log(prev)
+console.log("this is prev")
+
+console.log(this.state.currentvid);
+// const idindex= this.state.content.indexOf("1ae5jruuoc4q");
+
+
 console.log(idindex)
 
 if ( prev !== next ){
