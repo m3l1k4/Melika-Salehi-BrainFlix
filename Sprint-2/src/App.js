@@ -71,7 +71,7 @@ class App extends React.Component {
                 <UploadForm />
               </Route>
               <Route path="/home">
-                <CurrentVid />
+                <CurrentVid vid={this.state.content} />
 
                 <div className="App__bottom">
                   <div className="App__bottom--left">
@@ -123,3 +123,9 @@ export function postInfo(nameVal, commentVal) {
     })
 
 };
+
+
+
+export function vidQ(){
+
+}

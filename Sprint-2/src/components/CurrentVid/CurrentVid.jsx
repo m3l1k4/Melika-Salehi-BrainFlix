@@ -1,10 +1,14 @@
 import React from 'react'
 import './CurrentVid.scss'
 
-export default function CurrentVid({ handleSubmit }) {
+export default function CurrentVid({ vid }) {
+
+
     return (
+    
         <div className="CurrentVid">
-            <video className="CurrentVid__player" poster="../assets/Images/video-list-0.jpg">
+            <video className="CurrentVid__player" poster="{vid.image} key={vid.id}" >
+        {console.log(vid.id)}
 
             </video>
 
@@ -22,6 +26,7 @@ export default function CurrentVid({ handleSubmit }) {
                     <img src='../assets/Icons/SVG/Icon-volume.svg' ></img>
                 </div>
 
+               
 
             </div>
 
