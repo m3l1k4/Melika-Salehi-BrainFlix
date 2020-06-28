@@ -4,7 +4,7 @@ import axios from 'axios'
 import './App.css';
 import NavBar from './components/NavBar'
 import UploadForm from './components/UploadForm'
-import LandingPage from './components/LandingPage'
+import LandingPage from './LandingPage'
 //let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
 
 const api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
@@ -35,7 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
+     
           <NavBar />
           <Router>
 
@@ -45,11 +45,13 @@ class App extends React.Component {
               <Route exact path="/upload" component={UploadForm}>
                 <UploadForm />
               </Route>
-              <Route
-            exact
-            path="/:id"
-            render={props => <LandingPage {...props} />}
-          />
+              <Route exact path="/" 
+              render={props => <LandingPage {...props}/>}></Route>
+              <Route  path="/home" component={LandingPage}></Route>
+              <Route  path="/:id" component={LandingPage}></Route>
+       
+            
+  
                 
                 {/* <CurrentVid vid={this.state.currentvid} />
                   <div className="App__bottom">
@@ -75,7 +77,7 @@ class App extends React.Component {
 
 
 
-        </BrowserRouter>
+       
 
 
 

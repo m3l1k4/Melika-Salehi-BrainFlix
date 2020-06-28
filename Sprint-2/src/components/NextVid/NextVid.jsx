@@ -3,8 +3,11 @@ import { Route, Link, Switch, BrowserRouter as Router, BrowserRouter } from 'rea
 import './NextVid.scss'
 
 export default function NextVid({ vids }) {
-    return (
 
+
+
+    return (
+      
         vids.map(vid => {
             return <div key={vid.id} className="NextVid">
                 <div className="NextVid__info">
@@ -12,9 +15,12 @@ export default function NextVid({ vids }) {
                     <h3 className="NextVid__info--channel"> {vid.channel}</h3>
                 </div>
                 <Link to={`${vid.id}`}>
-                <img src={vid.image} key={vid.id} className="NextVid__thumbnail" />
+                    <img src={vid.image} key={vid.id} className="NextVid__thumbnail" />
                 </Link>
             </div>
         })
     )
 }
+
+
+
