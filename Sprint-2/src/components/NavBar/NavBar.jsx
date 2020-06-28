@@ -9,22 +9,21 @@ const imagebg = {
 
 export default function NavBar({ handleSubmit }) {
     return (
-        <form className="NavBar">
-
+        <div className="NavBar">
+          
           <Link to='/home' > <img className="NavBar__logo" src='../assets/Logo/Logo-brainflix.svg'></img> </Link> 
-          <Route exact path="/home"/>
+  
+          
             <div className="NavBar__Search">
                 <input className="NavBar__Search--field" type="text" placeholder="Search" name="Search"></input>
                
                
-          
-                 
-                 <button className="NavBar__Search--button" onClick="window.location.reload()"><img src='assets/Icons/SVG/Icon-upload.svg' className="NavBar__Search--upload"></img>UPLOAD</button>
-                 <Link to="/upload" >   
-            potato
-          
-               </Link>
-              
+                
+                 <Link to="/upload">
+                 <button className="NavBar__Search--button" ><img src='assets/Icons/SVG/Icon-upload.svg' className="NavBar__Search--upload"></img>UPLOAD</button>
+                  </Link>
+    
+                  
         
                
                
@@ -34,7 +33,7 @@ export default function NavBar({ handleSubmit }) {
             </div>
 
 
-        </form>
+        </div>
     )
 }
 

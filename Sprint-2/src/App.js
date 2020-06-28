@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom'
+import { Route, Link, Redirect, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom'
 import axios from 'axios'
 import './App.css';
 import NavBar from './components/NavBar'
@@ -35,23 +35,25 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-     
-          <NavBar />
-          <Router>
 
-            <Link to='/home'  >Two</Link>
+        <NavBar />
+        <Router>
 
-            <Switch>
-              <Route exact path="/upload" component={UploadForm}>
-                <UploadForm />
+          <Switch>
+            <Route exact path="/upload" >
+              <UploadForm />
+            </Route>
+            <Route exact path="/"
+              render={props => <LandingPage {...props} />}>
               </Route>
-              <Route  exact path="/" 
-                render={props => <LandingPage {...props}/>}></Route>
-              <Route  path="/home" component={LandingPage}></Route>
-              <Route  path="/:id" component={LandingPage}></Route>
+            <Route path="/home" component={LandingPage}></Route>
 
-            </Switch>
-          </Router>
+            <Route path="/:id" component={LandingPage}></Route>
+
+        
+
+          </Switch>
+        </Router>
 
       </div>
 

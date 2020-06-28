@@ -85,10 +85,6 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-
-
-
-
                 <CurrentVid vid={this.state.currentvid} />
                 <div className="App__bottom">
                     <div className="App__bottom--left">
