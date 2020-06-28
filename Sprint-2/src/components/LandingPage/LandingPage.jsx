@@ -1,16 +1,23 @@
 import React from "react";
 import { Route, Link, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom'
 import axios from 'axios'
-import './App.css';
-import NavBar from './components/NavBar'
-import UploadForm from './components/UploadForm'
-import LandingPage from './components/LandingPage'
-//let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
+import CurrentVid from '../CurrentVid'
+import NextVid from '../NextVid'
+import CommentsForm from '../CommentsForm'
+import CommentsList from '../CommentsList'
+import VidDescription from '../VidDescription'
+import UploadForm from '../UploadForm'
 
 const api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
 
 class App extends React.Component {
+  state = {
+    content: [],
+    currentvid: [],
+    comments: []
 
+
+  }
 
 
   handleSubmit = (event) => {
@@ -29,29 +36,49 @@ class App extends React.Component {
     event.target.reset();
   }
 
+  componentDidMount() {
 
+    axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + api_key)
+      .then(res => this.setState({ content: res.data })
+      )
+
+
+    axios.get(`https://project-2-api.herokuapp.com/videos/${this.state.currentvid.id}/?api_key=${api_key}`)
+      .then(res => this.setState({ currentvid: res.data })
+      )
+
+
+
+
+  }
+
+
+  componentDidUpdate(previous) {
+
+console.log(this.state.currentvid.id)
+console.log(window.location.pathname)
+console.log("update")
+
+  }
 
 
   render() {
     return (
       <div className="App">
         <BrowserRouter>
-          <NavBar />
+         
           <Router>
 
-            <Link to='/home'  >Two</Link>
+       
 
             <Switch>
               <Route exact path="/upload" component={UploadForm}>
                 <UploadForm />
               </Route>
-              <Route
-            exact
-            path="/:id"
-            render={props => <LandingPage {...props} />}
-          />
-                
-                {/* <CurrentVid vid={this.state.currentvid} />
+              <Route path="/:id" >
+
+             
+                  <CurrentVid  vid={this.state.currentvid} />
                   <div className="App__bottom">
                     <div className="App__bottom--left">
                       <VidDescription info={this.state.currentvid} />
@@ -67,8 +94,12 @@ class App extends React.Component {
                       <NextVid vids={this.state.content} />
                     
                     </div>
-                  </div> */}
-      
+                  </div>
+               
+                  </Route>
+           
+
+        
 
             </Switch>
           </Router>
