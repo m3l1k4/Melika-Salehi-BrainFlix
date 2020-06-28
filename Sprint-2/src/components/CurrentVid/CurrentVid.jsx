@@ -6,6 +6,7 @@ export default function CurrentVid({ vid }) {
   console.log(vid[1])
     return (
     
+    
         <div className="CurrentVid">
         
             <video className="CurrentVid__player" >

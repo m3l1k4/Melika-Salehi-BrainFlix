@@ -17,8 +17,6 @@ class App extends React.Component {
   state = {
     content: [],
     comments: []
-
-
   }
 
 
@@ -43,9 +41,11 @@ class App extends React.Component {
     axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + api_key)
       .then(res => this.setState({ content: res.data })
       )
-
-
   }
+
+
+compo
+
 
   render() {
     return (
@@ -66,7 +66,7 @@ class App extends React.Component {
 
                 <div className="App__bottom">
                   <div className="App__bottom--left">
-                    <VidDescription />
+                    <VidDescription  vid={this.state.content}/>
                     <CommentsForm handleSubmit={this.handleSubmit} />
                     <div className="App__bottom--left__comments">
                       <CommentsList comments={this.state.comments} />
