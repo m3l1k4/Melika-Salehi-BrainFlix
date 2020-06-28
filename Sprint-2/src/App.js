@@ -72,6 +72,7 @@ class App extends React.Component {
               </Route>
               <Route path="/home">
                 <CurrentVid vid={this.state.content} />
+        
 
                 <div className="App__bottom">
                   <div className="App__bottom--left">

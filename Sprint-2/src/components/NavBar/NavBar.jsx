@@ -11,7 +11,7 @@ export default function NavBar({ handleSubmit }) {
     return (
         <form className="NavBar">
 
-          <Link to='/home' > <img class="NavBar__logo" src='../assets/Logo/Logo-brainflix.svg'></img> </Link> 
+          <Link to='/home' > <img className="NavBar__logo" src='../assets/Logo/Logo-brainflix.svg'></img> </Link> 
           <Route exact path="/home"/>
             <div className="NavBar__Search">
                 <input className="NavBar__Search--field" type="text" placeholder="Search" name="Search"></input>
