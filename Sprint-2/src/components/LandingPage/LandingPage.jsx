@@ -46,17 +46,10 @@ class App extends React.Component {
     axios.get(`https://project-2-api.herokuapp.com/videos/1aivjruutn6a/?api_key=` + api_key)
       .then(res => this.setState({ currentvid: res.data })
       )
-
-
-    //   axios.get(`https://project-2-api.herokuapp.com/videos/${this.state.currentvid.id}/?api_key=` + api_key)
-    //   .then(res => this.setState({ currentvid: res.data })
-    //   )
-
-
-
-
   }
 
+
+ 
 
   componentDidUpdate(previous) {
 let prev=this.state.currentvid.id;
@@ -64,17 +57,15 @@ let next =this.props.match.params.id;
 console.log(prev)
 console.log(next)
 console.log("update")
+  let index=this.state.currentvid.findIndex(checkIndex);
 
 if ( prev !== next ){
 
          axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
      .then(res => this.setState({ currentvid: res.data })
    
-      )
-      
+      )    
 }
-
-
   }
 
 
@@ -129,4 +120,10 @@ export function postInfo(nameVal, commentVal) {
 
 };
 
+
+export function checkIndex(iid){
+
+    return this.state.currentvid.id ===this.props.id;
+
+}
 
