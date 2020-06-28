@@ -2,23 +2,14 @@ import React from 'react'
 import './CurrentVid.scss'
 
 export default function CurrentVid({ vid }) {
-    const json = vid[1];
-    const obj = JSON.parse(json);
-    
-    console.log(obj.count);
-    // expected output: 42
-    
-    console.log(obj.result);
-    // expected output: true
-
-    console.log(vid[1]);
-
-let cid="1af0jruup5gu";
+   
+  console.log(vid[1])
     return (
     
         <div className="CurrentVid">
-            <video className="CurrentVid__player" >
         
+            <video className="CurrentVid__player" >
+
             <img />
             </video>
 

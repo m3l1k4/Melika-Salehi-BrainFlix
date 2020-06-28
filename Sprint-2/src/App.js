@@ -46,16 +46,6 @@ class App extends React.Component {
 
 
   }
-  // axios.get('/SideVideoSeed.json').then(
-  //   res => this.setState({ content: res.data })
-  // )
-
-  // axios.get("https://project-1-api.herokuapp.com/comments?api_key=" + api_key)
-  //   .then(res => this.setState({ comments: res.data })
-  //   )
-
-
-
 
   render() {
     return (
@@ -87,6 +77,7 @@ class App extends React.Component {
                   <div className="App__bottom--right">
                     <h2 className="App__bottom--right__header">NEXT VIDEO</h2>
                     <NextVid vids={this.state.content} />
+                    {console.log(this.state.content[3])}
                   </div>
                 </div>
               </Route>
