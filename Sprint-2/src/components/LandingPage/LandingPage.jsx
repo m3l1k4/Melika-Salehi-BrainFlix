@@ -82,10 +82,7 @@ if ( prev !== next ){
    
     return (
       <div className="App">
-        <BrowserRouter>
-         
-          <Router>
-            <Switch>
+      
               <Route path="/:id" >
 
              
@@ -108,21 +105,7 @@ if ( prev !== next ){
                   </div>
                
                   </Route>
-           
-
         
-
-            </Switch>
-          </Router>
-
-
-
-        </BrowserRouter>
-
-
-
-
-
       </div>
 
     );
