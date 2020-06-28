@@ -2,9 +2,7 @@ import React from 'react'
 import './CurrentVid.scss'
 
 export default function CurrentVid({ vid }) {
-   
-  console.log(vid[1])
-  console.log("this is vid1")
+
     return (
     
         <div className="CurrentVid">

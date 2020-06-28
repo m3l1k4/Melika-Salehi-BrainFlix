@@ -81,7 +81,7 @@ componentDidUpdate(){
 
                 <div className="App__bottom">
                   <div className="App__bottom--left">
-                    <VidDescription  />
+                    <VidDescription info={this.state.currentvid}  />
                     <CommentsForm handleSubmit={this.handleSubmit} />
                     <div className="App__bottom--left__comments">
                       <CommentsList comments={this.state.comments} />
