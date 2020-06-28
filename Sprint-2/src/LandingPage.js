@@ -67,17 +67,30 @@ class App extends React.Component {
 
     componentDidUpdate(prevProps) {
 
-    //     console.log(this.props.match.params.id)
-        console.log(prevProps.match.params.id)
+        // console.log(prevProps.match.params.id)
    
-    //  console.log(this.state.updatedContent)
 
-    //     const vidID = this.state.content.filter((video) => {
+        const filtered=this.state.content.findIndex(video=>{
+            return video.id===this.props.match.params.id;
+        })
 
-    //         return video.id !== this.props.match.params.id
-    //     });
+console.log(this.state.currentvid.id)
+        if (this.state.currentvid !== undefined){
+            const newVideo={
+                id:this.state.currentvid.id,
+                title: this.state.currentvid.title,
+                channel: this.state.currentvid.channel,
+                image: this.state.currentvid.image,
+          };
 
+         this.state.content.push(newVideo);
+        }
 
+        this.state.content.splice(filtered,1)
+         
+     //   }
+
+        console.log(filtered,"filtered")
     if (this.props.match.params.id !== prevProps.match.params.id) {
 
         //  axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
@@ -88,30 +101,8 @@ class App extends React.Component {
             })
       
     }
-    // console.log(this.state.content)
-    // this.setState.filteredContent = this.state.content.filter((video) => {
-    //     return video.id !== this.props.match.params.id
-    // });
-
-    // console.log(this.state.filteredContent)
 
 
-    // this.setState ({content:this.state.vidID})
-    //         const filtered = this.state.content.findIndex((video) => {
-    //         return video.id === this.props.match.params.id
-    //     });
-    //     console.log(filtered)
-    //     console.log(vidID)
-
-    // console.log(vidID[0].id ,"do");
-    // this.state.content.splice("1a8qhruuzky3",1)
- //this.state.content.splice(vidID[0].id,1)
-
-
-    //    const vidID = this.state.content.filter((video) => {
-
-    //         return video.id === this.props.match.params.id
-    //     });
 
 
    
@@ -124,14 +115,14 @@ class App extends React.Component {
     render() {
 
 
-        let filteredContent = this.state.content.filter((video) => {
-            return video.id !== this.props.match.params.id
-        });
-        console.log(filteredContent, "dooooot")
-        console.log(this.state.content, "noooot")
+    //     let filteredContent = this.state.content.filter((video) => {
+    //         return video.id !== this.props.match.params.id
+    //     });
+    //     console.log(filteredContent, "dooooot")
+    //     console.log(this.state.content, "noooot")
 
-        if (filteredContent.length!==0){console.log("potato")
-    console.log(this.state.filteredContent[0])}
+    //     if (filteredContent.length!==0){console.log("potato")
+    // console.log(this.state.filteredContent[0])}
     
         return (
             <div className="App">
