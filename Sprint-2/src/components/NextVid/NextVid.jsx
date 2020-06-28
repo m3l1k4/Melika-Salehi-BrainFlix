@@ -4,8 +4,6 @@ import './NextVid.scss'
 
 export default function NextVid({ vids }) {
 
-
-
     return (
       
         vids.map(vid => {

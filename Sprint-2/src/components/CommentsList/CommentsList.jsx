@@ -33,7 +33,7 @@ export function epoch2Human(timeStampString) {
     let timeYear = currentTime.getFullYear();
     let timeMonth = currentTime.getMonth();
     let timeValue = timeString.concat(timeMonth, '/', timeDay, '/', timeYear);
-    console.log(timeValue);
+
     return timeValue;
 
 }

@@ -13,12 +13,8 @@ const api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
 class App extends React.Component {
     state = {
         content: [],
-        updatedContent:[],
-        filteredContent:[],
         currentvid: [],
         comments: []
-
-
     }
 
 
@@ -42,12 +38,8 @@ class App extends React.Component {
 
         axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + api_key)
             .then(res => {
-                this.setState({ content: res.data, updatedContent:res.data })
+                this.setState({ content: res.data })
 
-
-                //   axios.get(`https://project-2-api.herokuapp.com/videos/1aivjruutn6a/?api_key=` + api_key)
-                //   .then(res => this.setState({ currentvid: res.data })
-                //   )
 
                 axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
                     .then(res => this.setState({ currentvid: res.data })
@@ -57,74 +49,40 @@ class App extends React.Component {
     }
 
 
-    //     axios.get(`https://project-2-api.herokuapp.com/videos/1aivjruutn6a/?api_key=` + api_key)
-    //       .then(res => this.setState({ currentvid: res.data })
-    //       )
-    //   }
-
-
-
-
     componentDidUpdate(prevProps) {
 
-        // console.log(prevProps.match.params.id)
-   
 
-        const filtered=this.state.content.findIndex(video=>{
-            return video.id===this.props.match.params.id;
+        const filtered = this.state.content.findIndex(video => {
+            return video.id === this.props.match.params.id;
         })
 
-console.log(this.state.currentvid.id)
-        if (this.state.currentvid.id !== undefined){
-            const newVideo={
-                id:this.state.currentvid.id,
+
+        if (this.state.currentvid.id !== undefined) {
+            const newVidList = {
+                id: this.state.currentvid.id,
                 title: this.state.currentvid.title,
                 channel: this.state.currentvid.channel,
                 image: this.state.currentvid.image,
-          };
+            };
 
-         this.state.content.push(newVideo);
-          
+            this.state.content.push(newVidList);
+
         }
 
-       
-         this.state.content.splice(filtered,1)
-     //   }
+        this.state.content.splice(filtered, 1)
 
-        console.log(filtered,"filtered")
-    if (this.props.match.params.id !== prevProps.match.params.id) {
+        if (this.props.match.params.id !== prevProps.match.params.id) {
+            axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
+                .then(res => {
+                    this.setState({ currentvid: res.data })
 
-        //  axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
-        axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
-            .then(res => {
-                this.setState({ currentvid: res.data })
-     
-            })
-      
-    }
+                })
 
-
-
-
-   
-
-
-  
+        }
 
     }
 
     render() {
-
-
-    //     let filteredContent = this.state.content.filter((video) => {
-    //         return video.id !== this.props.match.params.id
-    //     });
-    //     console.log(filteredContent, "dooooot")
-    //     console.log(this.state.content, "noooot")
-
-    //     if (filteredContent.length!==0){console.log("potato")
-    // console.log(this.state.filteredContent[0])}
-    
         return (
             <div className="App">
 
@@ -148,14 +106,11 @@ console.log(this.state.currentvid.id)
 
                     </div>
                 </div>
-
-
-
             </div>
 
         );
 
-        
+
     }
 
 }

@@ -46,21 +46,12 @@ class App extends React.Component {
                 <UploadForm />
               </Route>
               <Route  exact path="/" 
-              render={props => <LandingPage {...props}/>}></Route>
+                render={props => <LandingPage {...props}/>}></Route>
               <Route  path="/home" component={LandingPage}></Route>
               <Route  path="/:id" component={LandingPage}></Route>
-       
 
             </Switch>
           </Router>
-
-
-
-       
-
-
-
-
 
       </div>
 
