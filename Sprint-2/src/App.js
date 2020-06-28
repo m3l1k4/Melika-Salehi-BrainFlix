@@ -11,12 +11,12 @@ import VidDescription from './components/VidDescription'
 import UploadForm from './components/UploadForm'
 //let api_key = "5c4c8003-3483-45f0-bb8a-89ee259fc2ed";
 
-let api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
+const api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
 
 class App extends React.Component {
   state = {
     content: [],
-    currentvid:[],
+    currentvid: [],
     comments: []
 
 
@@ -46,23 +46,21 @@ class App extends React.Component {
       )
 
 
-      axios.get("https://project-2-api.herokuapp.com/videos/1aivjruutn6a/?api_key=" + api_key)
+    axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.id}/?api_key=${api_key}`)
       .then(res => this.setState({ currentvid: res.data })
       )
 
 
-    
+
 
   }
 
-  
-componentDidUpdate(){
+
+  componentDidUpdate() {
 
 
-  
 
-
-}
+  }
 
 
   render() {
@@ -78,27 +76,31 @@ componentDidUpdate(){
               <Route exact path="/upload" component={UploadForm}>
                 <UploadForm />
               </Route>
-              <Route path="/home">
-                <CurrentVid vid={this.state.currentvid} />
-        
+              <Route path="/:id" render={props => {
 
-                <div className="App__bottom">
-                  <div className="App__bottom--left">
-                    <VidDescription info={this.state.currentvid}  />
-                    <CommentsForm handleSubmit={this.handleSubmit} />
-                    <div className="App__bottom--left__comments">
-                      <CommentsList comments={this.state.comments} />
+                return <div>
+                  <CurrentVid {...props} vid={this.state.currentvid} />
+                  <div className="App__bottom">
+                    <div className="App__bottom--left">
+                      <VidDescription info={this.state.currentvid} />
+                      <CommentsForm handleSubmit={this.handleSubmit} />
+                      <div className="App__bottom--left__comments">
+                        <CommentsList comments={this.state.comments} />
+                      </div>
+
                     </div>
 
-                  </div>
-
-                  <div className="App__bottom--right">
-                    <h2 className="App__bottom--right__header">NEXT VIDEO</h2>
-                    <NextVid vids={this.state.content} />
-                    {console.log(this.state.content[3])}
+                    <div className="App__bottom--right">
+                      <h2 className="App__bottom--right__header">NEXT VIDEO</h2>
+                      <NextVid vids={this.state.content} />
+                      {console.log(this.state.content[3])}
+                    </div>
                   </div>
                 </div>
-              </Route>
+
+              }}
+
+              />
 
             </Switch>
           </Router>
@@ -136,6 +138,6 @@ export function postInfo(nameVal, commentVal) {
 
 
 
-export function vidQ(){
+export function vidQ() {
 
 }
