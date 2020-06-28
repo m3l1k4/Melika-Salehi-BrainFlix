@@ -45,32 +45,11 @@ class App extends React.Component {
               <Route exact path="/upload" component={UploadForm}>
                 <UploadForm />
               </Route>
-              <Route exact path="/" 
+              <Route  exact path="/" 
               render={props => <LandingPage {...props}/>}></Route>
               <Route  path="/home" component={LandingPage}></Route>
               <Route  path="/:id" component={LandingPage}></Route>
        
-            
-  
-                
-                {/* <CurrentVid vid={this.state.currentvid} />
-                  <div className="App__bottom">
-                    <div className="App__bottom--left">
-                      <VidDescription info={this.state.currentvid} />
-                      <CommentsForm handleSubmit={this.handleSubmit} />
-                      <div className="App__bottom--left__comments">
-                        <CommentsList comments={this.state.comments} />
-                      </div>
-
-                    </div>
-
-                    <div className="App__bottom--right">
-                      <h2 className="App__bottom--right__header">NEXT VIDEO</h2>
-                      <NextVid vids={this.state.content} />
-                    
-                    </div>
-                  </div> */}
-      
 
             </Switch>
           </Router>

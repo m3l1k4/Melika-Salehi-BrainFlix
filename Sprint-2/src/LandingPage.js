@@ -49,7 +49,7 @@ class App extends React.Component {
                 //   .then(res => this.setState({ currentvid: res.data })
                 //   )
 
-                axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}//?api_key=` + api_key)
+                axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
                     .then(res => this.setState({ currentvid: res.data })
                     )
 
@@ -75,7 +75,7 @@ class App extends React.Component {
         })
 
 console.log(this.state.currentvid.id)
-        if (this.state.currentvid !== undefined){
+        if (this.state.currentvid.id !== undefined){
             const newVideo={
                 id:this.state.currentvid.id,
                 title: this.state.currentvid.title,
@@ -84,10 +84,11 @@ console.log(this.state.currentvid.id)
           };
 
          this.state.content.push(newVideo);
+          
         }
 
-        this.state.content.splice(filtered,1)
-         
+       
+         this.state.content.splice(filtered,1)
      //   }
 
         console.log(filtered,"filtered")
