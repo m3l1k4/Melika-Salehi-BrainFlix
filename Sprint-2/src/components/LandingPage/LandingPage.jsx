@@ -63,6 +63,10 @@ class App extends React.Component {
 console.log(this.state.currentvid.id)
 console.log(this.props.match.params.id)
 console.log("update")
+    //  axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
+    //  .then(res => this.setState({ currentvid: res.data })
+    //   )
+
 
   }
 
