@@ -105,7 +105,7 @@ if ( prev !== next ){
                   </div>
                
                   </Route>
-        
+         
       </div>
 
     );
