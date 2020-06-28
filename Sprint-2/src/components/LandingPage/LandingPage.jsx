@@ -54,10 +54,15 @@ class App extends React.Component {
   componentDidUpdate(previous) {
 let prev=this.state.currentvid.id;
 let next =this.props.match.params.id;
-console.log(prev)
-console.log(next)
-console.log("update")
-  let index=this.state.currentvid.findIndex(checkIndex);
+
+    let idindex=this.state.content.findIndex( vid =>{
+
+        console.log(vid.id)
+        console.log("this is vid id")
+        console.log(this.props.match.params.id)
+        return this.props.match.params.id == vid.id 
+  });
+console.log(idindex)
 
 if ( prev !== next ){
 
@@ -121,9 +126,4 @@ export function postInfo(nameVal, commentVal) {
 };
 
 
-export function checkIndex(iid){
-
-    return this.state.currentvid.id ===this.props.id;
-
-}
 
