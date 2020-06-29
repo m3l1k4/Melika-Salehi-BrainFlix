@@ -84,6 +84,12 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .upload-video {
+    margin: 0 120px;
+  }
+}
+
 .upload-video__header {
   font-family: "Avenir-Next-Bold";
   color: #323232;
@@ -107,7 +113,24 @@
   }
 }
 
-.upload-video__form--visual__title {
+@media (min-width: 1200px) {
+  .upload-video__form--body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .upload-video__form--body__visual {
+    width: 344px;
+  }
+}
+
+.upload-video__form--body__visual--title {
   font-family: "Avenir-Next-Demi";
   color: #afafaf;
   font-size: 14px;
@@ -115,38 +138,45 @@
   margin: 0;
 }
 
-.upload-video__form--visual__img {
+.upload-video__form--body__visual--img {
   border-radius: 4px;
 }
 
 @media (min-width: 320px) {
-  .upload-video__form--visual__img {
+  .upload-video__form--body__visual--img {
     width: 288px;
     height: 153px;
   }
 }
 
 @media (min-width: 768px) {
-  .upload-video__form--visual__img {
+  .upload-video__form--body__visual--img {
     width: 344px;
     height: 183px;
   }
 }
 
 @media (min-width: 320px) {
-  .upload-video__form--visual {
+  .upload-video__form--body__visual {
     margin-bottom: 32px;
   }
 }
 
 @media (min-width: 768px) {
-  .upload-video__form--field {
+  .upload-video__form--body__field {
     padding-bottom: 40px;
     border-bottom: 1px solid #afafaf;
   }
 }
 
-.upload-video__form--field__title {
+@media (min-width: 1200px) {
+  .upload-video__form--body__field {
+    border-bottom: none;
+    width: 595px;
+  }
+}
+
+.upload-video__form--body__field--title {
   font-family: "Avenir-Next-Demi";
   color: #afafaf;
   font-size: 14px;
@@ -154,7 +184,7 @@
   margin: 0;
 }
 
-.upload-video__form--field__upload-title {
+.upload-video__form--body__field--upload-title {
   resize: none;
   border: 1px solid #afafaf;
   -webkit-box-sizing: border-box;
@@ -165,13 +195,13 @@
 }
 
 @media (min-width: 320px) {
-  .upload-video__form--field__upload-title {
+  .upload-video__form--body__field--upload-title {
     width: 100%;
     margin-bottom: 24px;
   }
 }
 
-.upload-video__form--field__upload-desc {
+.upload-video__form--body__field--upload-desc {
   resize: none;
   border: 1px solid #afafaf;
   -webkit-box-sizing: border-box;
@@ -181,7 +211,7 @@
 }
 
 @media (min-width: 320px) {
-  .upload-video__form--field__upload-desc {
+  .upload-video__form--body__field--upload-desc {
     height: 143px;
     width: 100%;
   }
@@ -217,6 +247,14 @@
     -webkit-box-pack: right;
         -ms-flex-pack: right;
             justify-content: right;
+  }
+}
+
+@media (min-width: 1200px) {
+  .upload-video__form--options {
+    border-top: 1px solid #afafaf;
+    padding-top: 40px;
+    margin-top: 0px;
   }
 }
 
