@@ -11,18 +11,31 @@
     align-items: center;
     border-bottom: solid 1px #e1e1e1;
 
+    @include mobile{
+        margin-left:16px;
+        margin-right:16px;
+    }
+
+    @include tablet{
+        margin-left:0;
+        margin-right:0;
+    }
     &__box {
         display: flex;
         flex-direction: row;
         padding-bottom: 24px;
         width: 100%;
         height: auto;
-        width: inherit;
+        
+        @include mobile{
+          
+          
+        }
     }
 
     &__div {
         @include mobile {
-            width: 224px;
+            width: 100%;
         }
 
         @include tablet {
@@ -65,13 +78,23 @@
         display: flex;
         align-items: center;
         background-color: silver;
-        align-self: start;
+        align-self: flex-start;
         width: 40px;
         height: 40px;
         margin-right: 16px;
         margin-top: 12px;
-        @include mobile {
-        }
+    
+     @include mobile{
+        margin-right: 12px;
+        padding-right: 6px;
+     }
+
+     @include tablet{
+        margin-right: 16px;
+        padding-right: 0px;
+     }
+
+
     }
 
     &__comment {
