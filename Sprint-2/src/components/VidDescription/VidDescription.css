@@ -67,6 +67,9 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-bottom: 24px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -118,6 +121,7 @@
 @media (min-width: 320px) {
   .VidDesc__postInfo {
     margin-bottom: 32px;
+    margin-right: 24px;
   }
 }
 
