@@ -18,18 +18,12 @@ export default function NavBar({ handleSubmit }) {
                 <input className="NavBar__Search--field" type="text" placeholder="Search" name="Search"></input>
                
                
-                
+                <div className="NavBar__Search--user">
                  <Link to="/upload">
-                 <button className="NavBar__Search--button" ><img src='assets/Icons/SVG/Icon-upload.svg' className="NavBar__Search--upload"></img>UPLOAD</button>
+                 <button className="NavBar__Search--user__button" ><img src='assets/Icons/SVG/Icon-upload.svg' className="NavBar__Search--user__upload"></img>UPLOAD</button>
                   </Link>
-    
-                  
-        
-               
-               
-
-                <div className="NavBar__Search--icon" style={imagebg}></div>
-
+                <div className="NavBar__Search--user__icon" style={imagebg}></div>
+                </div>
             </div>
 
 
