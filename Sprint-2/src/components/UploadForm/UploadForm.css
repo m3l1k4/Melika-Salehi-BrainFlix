@@ -1,0 +1,270 @@
+@font-face {
+  font-family: 'Avenir-Next-Bold';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-BoldIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-BoldIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Demi';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-DemiIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-DemiIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Heavy';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-HeavyIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-HeavyIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-It';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-It.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Light';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-LightIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-LightIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Medium';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-MediumIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-MediumIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Regular';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Thin';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-ThinIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-ThinIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLtIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLtIt.otf");
+}
+
+@media (min-width: 768px) {
+  .upload-video {
+    margin: 0 24px;
+  }
+}
+
+.upload-video__header {
+  font-family: "Avenir-Next-Bold";
+  color: #323232;
+}
+
+@media (min-width: 320px) {
+  .upload-video__header {
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .upload-video__header {
+    font-size: 36px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+}
+
+.upload-video__form--visual__title {
+  font-family: "Avenir-Next-Demi";
+  color: #afafaf;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.upload-video__form--visual__img {
+  border-radius: 4px;
+}
+
+@media (min-width: 320px) {
+  .upload-video__form--visual__img {
+    width: 288px;
+    height: 153px;
+  }
+}
+
+@media (min-width: 768px) {
+  .upload-video__form--visual__img {
+    width: 344px;
+    height: 183px;
+  }
+}
+
+@media (min-width: 320px) {
+  .upload-video__form--visual {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .upload-video__form--field {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #afafaf;
+  }
+}
+
+.upload-video__form--field__title {
+  font-family: "Avenir-Next-Demi";
+  color: #afafaf;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.upload-video__form--field__upload-title {
+  resize: none;
+  border: 1px solid #afafaf;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  height: 48px;
+}
+
+@media (min-width: 320px) {
+  .upload-video__form--field__upload-title {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+.upload-video__form--field__upload-desc {
+  resize: none;
+  border: 1px solid #afafaf;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+@media (min-width: 320px) {
+  .upload-video__form--field__upload-desc {
+    height: 143px;
+    width: 100%;
+  }
+}
+
+.upload-video__form--options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 320px) {
+  .upload-video__form--options {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .upload-video__form--options {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 40px;
+    margin-bottom: 48px;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+}
+
+.upload-video__form--options__button {
+  background-color: #0095ff;
+  color: #ffffff;
+  font-family: "Avenir-Next-Demi";
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  height: 48px;
+  border: 0px;
+}
+
+@media (min-width: 320px) {
+  .upload-video__form--options__button {
+    width: 100%;
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 768px) {
+  .upload-video__form--options__button {
+    width: 160px;
+    margin-top: 0;
+  }
+}
+
+.upload-video__form--options__cancel {
+  color: #0095ff;
+  font-family: "Avenir-Next-Demi";
+  font-size: 16px;
+}
+
+@media (min-width: 320px) {
+  .upload-video__form--options__cancel {
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .upload-video__form--options__cancel {
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 48px;
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=UploadForm.css.map */
