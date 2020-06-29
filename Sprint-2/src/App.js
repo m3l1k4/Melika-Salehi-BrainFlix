@@ -34,10 +34,12 @@ class App extends React.Component {
 
   render() {
     return (
+
+      <Router>
       <div className="App">
 
         <NavBar />
-        <Router>
+       
 
           <Switch>
             <Route exact path="/upload" >
@@ -53,10 +55,10 @@ class App extends React.Component {
         
 
           </Switch>
-        </Router>
+       
 
       </div>
-
+      </Router>
     );
   }
 
