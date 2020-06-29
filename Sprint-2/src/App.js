@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Link, Redirect, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom'
-import axios from 'axios'
 import './App.css';
 import NavBar from './components/NavBar'
 import UploadForm from './components/UploadForm'
@@ -9,10 +8,6 @@ import LandingPage from './LandingPage'
 const api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
 
 class App extends React.Component {
-
-
-  
-
   render() {
     return (
 

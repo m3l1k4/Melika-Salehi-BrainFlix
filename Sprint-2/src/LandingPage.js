@@ -1,12 +1,11 @@
 import React from "react";
-import { Route, Link, Switch, BrowserRouter as Router, BrowserRouter, Redirect } from 'react-router-dom'
 import axios from 'axios'
 import CurrentVid from './components/CurrentVid'
 import NextVid from './components/NextVid'
 import CommentsForm from './components/CommentsForm'
 import CommentsList from './components/CommentsList'
 import VidDescription from './components/VidDescription'
-import UploadForm from './components/UploadForm'
+
 
 const api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
 
@@ -17,7 +16,7 @@ class App extends React.Component {
         comments: []
     }
 
-
+//handles comment submission
     handleSubmit = (event) => {
         event.preventDefault();
 
@@ -36,7 +35,7 @@ class App extends React.Component {
         postInfo("Mohan Muruge", commentVal, idVal);
         event.target.reset();
     }
-
+//axios API calls to get the video info
     componentDidMount() {
 
         axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + api_key)
@@ -53,12 +52,8 @@ class App extends React.Component {
     }
 
 
-
+//handles the updating of nextVid list based on current vid being watched
     componentDidUpdate(prevProps) {
-
-        
-
-
 
         const indexID = this.state.content.findIndex(video => {
             return video.id === this.props.match.params.id;
@@ -85,11 +80,6 @@ class App extends React.Component {
                     this.setState({ currentvid: res.data, comments:res.data.comments })
 
                 })
-
-            // axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/comments/?api_key=` + api_key)
-            // .then(res => this.setState({ comments: res.data })
-            // )   
-
 
         }
 
@@ -126,6 +116,8 @@ class App extends React.Component {
 }
 
 export default App;
+
+//handles posting to API comments
 export function postInfo(nameVal, commentVal, idVal) {
     console.log(idVal,"hooo")
     axios.post(`https://project-2-api.herokuapp.com/videos/${idVal}/comments/?api_key=` + api_key,
