@@ -11,6 +11,15 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .VidDesc {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 

@@ -5,6 +5,12 @@
     @include mobile {
         display: flex;
         flex-direction: column;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    @include tablet{
+        margin-left:0;
+        margin-right: 0;
     }
     &__Desc {
         font-family: "Avenir-Next-Light";

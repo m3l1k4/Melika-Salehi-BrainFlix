@@ -119,6 +119,13 @@
 @media (min-width: 320px) {
   .comments-form__header {
     margin-bottom: 32px;
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .comments-form__header {
+    margin-left: 0;
   }
 }
 
