@@ -101,7 +101,9 @@
   .upload-video__header {
     font-size: 36px;
     margin-top: 48px;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #afafaf;
   }
 }
 
