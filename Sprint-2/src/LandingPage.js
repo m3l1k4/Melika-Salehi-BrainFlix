@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom'
+import { Route, Link, Switch, BrowserRouter as Router, BrowserRouter, Redirect } from 'react-router-dom'
 import axios from 'axios'
 import CurrentVid from './components/CurrentVid'
 import NextVid from './components/NextVid'
@@ -41,12 +41,15 @@ class App extends React.Component {
                 this.setState({ content: res.data })
 
 
-                axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
-                    .then(res => this.setState({ currentvid: res.data })
-                    )
 
             })
-    }
+   
+            axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
+            .then(res => this.setState({ currentvid: res.data })
+            )   
+   
+        }
+
 
 
     componentDidUpdate(prevProps) {
@@ -83,6 +86,7 @@ class App extends React.Component {
     }
 
     render() {
+        if (!this.state.currentvid) return <Redirect to="/1a8qhruuzky3" /> 
         return (
             <div className="App">
                 <CurrentVid vid={this.state.currentvid} />

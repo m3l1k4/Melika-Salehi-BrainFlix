@@ -47,8 +47,11 @@ class App extends React.Component {
             </Route>
             <Route exact path="/"
               render={props => <LandingPage {...props} />}>
+                <Redirect to="/1af0jruup5gu" />
               </Route>
-            <Route path="/home" component={LandingPage}></Route>
+            <Route path="/home" component={LandingPage}>
+            <Redirect to="/1af0jruup5gu" />
+            </Route>
 
             <Route path="/:id" component={LandingPage}></Route>
 
