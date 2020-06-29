@@ -78,6 +78,10 @@
   src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLtIt.otf");
 }
 
+.link {
+  text-decoration: none;
+}
+
 .NavBar {
   display: -webkit-box;
   display: -ms-flexbox;

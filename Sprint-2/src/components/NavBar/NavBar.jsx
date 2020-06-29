@@ -19,7 +19,7 @@ export default function NavBar({ handleSubmit }) {
                
                
                 <div className="NavBar__Search--user">
-                 <Link to="/upload">
+                 <Link to="/upload" className="link">
                  <button className="NavBar__Search--user__button" ><img src='assets/Icons/SVG/Icon-upload.svg' className="NavBar__Search--user__upload"></img>UPLOAD</button>
                   </Link>
                 <div className="NavBar__Search--user__icon" style={imagebg}></div>

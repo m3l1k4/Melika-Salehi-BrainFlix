@@ -1,6 +1,9 @@
 @import "../../mixins.scss";
 @import "../../fonts.scss";
 
+.link{
+    text-decoration: none;
+}
 .NavBar {
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +69,7 @@
 &--user{
     display: flex;
     &__button {
+       
         background-color: #0095ff;
         color: white;
         border-radius: 4px;
