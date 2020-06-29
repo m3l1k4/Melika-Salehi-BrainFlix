@@ -40,14 +40,17 @@ class App extends React.Component {
             .then(res => {
                 this.setState({ content: res.data })
 
-
-
             })
    
             axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
             .then(res => this.setState({ currentvid: res.data })
             )   
-   
+
+            const currentID = this.props.match.params.id;
+            console.log(currentID, "dooooot")
+            // axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/comments/?api_key=` + api_key)
+            // .then(res => this.setState({ comments: res.data })
+            // )   
         }
 
 
@@ -55,7 +58,7 @@ class App extends React.Component {
     componentDidUpdate(prevProps) {
 
 
-        const filtered = this.state.content.findIndex(video => {
+        const indexID = this.state.content.findIndex(video => {
             return video.id === this.props.match.params.id;
         })
 
@@ -72,7 +75,7 @@ class App extends React.Component {
 
         }
 
-        this.state.content.splice(filtered, 1)
+        this.state.content.splice(indexID, 1)
 
         if (this.props.match.params.id !== prevProps.match.params.id) {
             axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
@@ -81,12 +84,17 @@ class App extends React.Component {
 
                 })
 
+                // axios.get( `https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/comments/?api_key=` + api_key)
+                // .then(res => this.setState({ comments: res.data })
+                // )   
+
+
         }
 
     }
 
     render() {
-        if (!this.state.currentvid) return <Redirect to="/1a8qhruuzky3" /> 
+       
         return (
             <div className="App">
                 <CurrentVid vid={this.state.currentvid} />
@@ -117,7 +125,7 @@ class App extends React.Component {
 
 export default App;
 export function postInfo(nameVal, commentVal) {
-    axios.post("https://project-1-api.herokuapp.com/comments?api_key=" + api_key,
+    axios.post(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/comments/?api_key=` + api_key,
         {
             name: nameVal,
             comment: commentVal
