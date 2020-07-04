@@ -49,6 +49,15 @@ class App extends React.Component {
             )
 
 
+
+
+         
+    axios.get('/students')
+    .then(res => {
+        // this.setState({ students: res.data })
+        console.log(res.data, "potato")
+    })
+
     }
 
 
