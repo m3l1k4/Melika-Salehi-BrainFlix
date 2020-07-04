@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Avenir-Next-Bold';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-BoldIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-BoldIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Demi';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-DemiIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-DemiIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Heavy';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-HeavyIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-HeavyIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-It';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-It.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Light';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-LightIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-LightIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Medium';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-MediumIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-MediumIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Regular';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Thin';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-ThinIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-ThinIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLtIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLtIt.otf");
+}
+
+* html {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .App {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .App__bottom {
+    margin: 0 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .App__bottom--left {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .App__bottom--left {
+    width: 712px;
+    margin-right: 24px;
+    border-right: solid 1px #e1e1e1;
+  }
+}
+
+.App__bottom--left__comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media (min-width: 320px) {
+  .App__bottom--right {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .App__bottom--right {
+    padding-top: 40px;
+    margin-left: 24px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .App__bottom--right {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.App__bottom--right__header {
+  font-size: 14px;
+  color: #afafaf;
+  font-family: "Avenir-Next-Medium";
+  margin-bottom: 40px;
+}
+
+@media (min-width: 320px) {
+  .App__bottom--right__header {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .App__bottom--right__header {
+    margin-top: 0;
+  }
+}
+/*# sourceMappingURL=App.css.map */

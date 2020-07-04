@@ -1,0 +1,187 @@
+@import "../../mixins.scss";
+@import "../../fonts.scss";
+
+.upload-video {
+    @include tablet {
+        margin: 0 24px;
+    }
+
+    @include desktop{
+        margin: 0 120px;
+    }
+    &__header {
+        font-family: "Avenir-Next-Bold";
+        color: #323232;
+
+        @include mobile {
+            font-size: 24px;
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+
+        @include tablet {
+            font-size: 36px;
+            margin-top: 48px;
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #afafaf;
+        }
+    }
+
+    &__form {
+   
+        &--body{
+       
+              @include desktop{
+                   display: flex;
+           justify-content: space-between;
+              }
+           
+          
+
+             &__visual {
+                 @include desktop{
+                   width: 344px; 
+                 }
+                &--title {
+                    font-family: "Avenir-Next-Demi";
+                    color: #afafaf;
+                    font-size: 14px;
+                    line-height: 22px;
+                    margin: 0;
+                }
+
+                &--img {
+                    border-radius: 4px;
+                    @include mobile {
+                        width: 288px;
+                        height: 153px;
+                    }
+
+                    @include tablet {
+                        width: 344px;
+                        height: 183px;
+                    }
+                }
+                @include mobile {
+                    margin-bottom: 32px;
+                }
+            }
+            &__field {
+                @include tablet {
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid #afafaf;
+                }
+
+                @include desktop {
+                    border-bottom: none;
+                    width: 595px;
+                   
+                }
+                &--title {
+                    font-family: "Avenir-Next-Demi";
+                    color: #afafaf;
+                    font-size: 14px;
+                    line-height: 22px;
+                    margin: 0;
+                }
+
+                &--upload-title {
+                    resize: none;
+                    border: 1px solid #afafaf;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    background-color: #f8f8f8;
+                    height: 48px;
+                    @include mobile {
+                        width: 100%;
+                        margin-bottom: 24px;
+                    }
+
+            
+                }
+
+                &--upload-desc {
+                    resize: none;
+                    border: 1px solid #afafaf;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    background-color: #f8f8f8;
+                    @include mobile {
+                        height: 143px;
+                        width: 100%;
+                    }
+
+
+                 
+                }
+            }
+        }
+
+        &--options {
+            display: flex;
+
+
+
+            @include mobile {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            @include tablet {
+                flex-direction: row-reverse;
+                align-items: center;
+                margin-top: 40px;
+                margin-bottom: 48px;
+                justify-content: right;
+            }
+
+            @include desktop {
+                border-top: 1px solid #afafaf;
+                padding-top: 40px;
+                margin-top:0px;
+            }
+
+            &__button {
+                background-color: #0095ff;
+                color: #ffffff;
+                font-family: "Avenir-Next-Demi";
+                border-radius: 4px;
+                font-size: 16px;
+                line-height: 24px;
+                height: 48px;
+                border: 0px;
+
+                @include mobile {
+                    width: 100%;
+                    margin-top: 32px;
+                }
+
+                @include tablet {
+                    width: 160px;
+                    margin-top: 0;
+                }
+            }
+
+            &__cancel {
+                color: #0095ff;
+                font-family: "Avenir-Next-Demi";
+                font-size: 16px;
+
+                @include mobile {
+                    text-align: center;
+                    margin-top: 24px;
+                    margin-bottom: 0;
+                    margin-right: 0;
+                }
+
+                @include tablet {
+                    text-align: right;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-right: 48px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+@import "../../mixins.scss";
+
+.Comments {
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-bottom: solid 1px #e1e1e1;
+
+    @include mobile{
+        margin-left:16px;
+        margin-right:16px;
+    }
+
+    @include tablet{
+        margin-left:0;
+        margin-right:0;
+    }
+    &__box {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 24px;
+        width: 100%;
+        height: auto;
+        
+        @include mobile{
+          
+          
+        }
+    }
+
+    &__div {
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 650px;
+        }
+    }
+
+    &__heading {
+        display: flex;
+        align-items: baseline;
+        height: auto;
+
+        @include mobile {
+            justify-content: space-between;
+        }
+        @include tablet {
+            justify-content: left;
+        }
+
+        &--time {
+            color: #afafaf;
+            font-family: "Avenir-Next-light";
+            padding-left: 1rem;
+        }
+
+        &--name {
+            color: #323232;
+            font-family: "Avenir-Next-Demi";
+
+            @include mobile {
+                font-size: 14px;
+                line-height: 22px;
+                margin: 0;
+            }
+        }
+    }
+
+    &__icon {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        background-color: silver;
+        align-self: flex-start;
+        width: 40px;
+        height: 40px;
+        margin-right: 16px;
+        margin-top: 12px;
+    
+     @include mobile{
+        margin-right: 12px;
+        padding-right: 6px;
+     }
+
+     @include tablet{
+        margin-right: 16px;
+        padding-right: 0px;
+     }
+
+
+    }
+
+    &__comment {
+        font-family: "Avenir-Next-Light";
+        margin: 0;
+        flex-wrap: wrap;
+        @include tablet {
+            width: 624px;
+        }
+    }
+}

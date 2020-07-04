@@ -1,0 +1,29 @@
+@import "../../mixins.scss";
+@import "../../fonts.scss";
+.NextVid {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 70px;
+    padding-bottom: 24px;
+    justify-content: flex-end;
+
+    &__info {
+        color: #323232;
+        margin-left: 16px;
+        &--title {
+            font-family: "Avenir-Next-Demi";
+            font-size: 14px;
+        }
+        &--channel {
+            font-family: "Avenir-Next-Light";
+            font-size: 12px;
+        }
+    }
+    &__thumbnail {
+        width: 120px;
+        height: 70px;
+        border-radius: 4px;
+        align-self: start;
+    }
+}

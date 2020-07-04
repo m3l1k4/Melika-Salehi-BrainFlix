@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'Avenir-Next-Bold';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-BoldIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-BoldIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Demi';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-DemiIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-DemiIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Heavy';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Heavy.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-HeavyIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-HeavyIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-It';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-It.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Light';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Light.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-LightIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-LightIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Medium';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Medium.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-MediumIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-MediumIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Regular';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Thin';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Thin.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-ThinIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-ThinIt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLt.otf");
+}
+
+@font-face {
+  font-family: 'Avenir-Next-UltLtIt';
+  src: url("./fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-UltLtIt.otf");
+}
+
+.CurrentVid {
+  position: relative;
+  width: 100%;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 320px) {
+  .CurrentVid {
+    height: 183px;
+  }
+}
+
+@media (min-width: 768px) {
+  .CurrentVid {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .CurrentVid {
+    height: 520px;
+  }
+}
+
+.CurrentVid__player {
+  height: inherit;
+  margin: 0;
+}
+
+@media (min-width: 320px) {
+  .CurrentVid__player {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .CurrentVid__player {
+    width: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .CurrentVid__player {
+    width: 944px;
+  }
+}
+
+.CurrentVid__components {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 0;
+  bottom: 48px;
+}
+
+.CurrentVid__components--play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(20, 20, 20, 0.5);
+          box-shadow: inset 0 0 0 1000px rgba(20, 20, 20, 0.5);
+  border-radius: 4px;
+  width: 48px;
+  height: 32px;
+}
+
+.CurrentVid__components--slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+  color: #e1e1e1;
+  height: 32px;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(20, 20, 20, 0.5);
+          box-shadow: inset 0 0 0 1000px rgba(20, 20, 20, 0.5);
+  border-radius: 4px;
+}
+
+@media (min-width: 320px) {
+  .CurrentVid__components--slider {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .CurrentVid__components--slider {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 320px) {
+  .CurrentVid__components--slider {
+    width: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .CurrentVid__components--slider {
+    width: 519px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .CurrentVid__components--slider {
+    width: 751px;
+  }
+}
+
+.CurrentVid__components--slider__line {
+  width: 700px;
+  height: 2px;
+  background-color: black;
+  margin: 0 16px;
+}
+
+.CurrentVid__components--slider__time {
+  margin-right: 16px;
+}
+
+@media (min-width: 320px) {
+  .CurrentVid__components--slider__time {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .CurrentVid__components--slider__time {
+    display: block;
+  }
+}
+
+.CurrentVid__components--rcontrols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 16px;
+  -webkit-box-shadow: inset 0 0 0 1000px rgba(20, 20, 20, 0.5);
+          box-shadow: inset 0 0 0 1000px rgba(20, 20, 20, 0.5);
+  border-radius: 4px;
+  width: 48px;
+  height: 32px;
+}
+/*# sourceMappingURL=CurrentVid.css.map */
