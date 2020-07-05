@@ -61,16 +61,8 @@ app.get('/videos/:id', (req, res) => {
 
 app.get('/videos/:id/comments', (req, res) => {
 
-  // const checkStatus = mainVid.some(video => video.id === req.params.id);
-
-
-  // if (checkStatus) {
     let test = mainVid.filter(video => video.id === req.params.id);
     res.json(test[0].comments)
-
-  // }
-
-  // else { console.log("notfound") }
 
 })
 
@@ -110,11 +102,6 @@ app.post('/videos', (req, res) => {
   res.json(videos)
 
 })
-
-
-
-
-
 
 
 
