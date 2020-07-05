@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 app.get('/mainVid', (req, res) => {
   res.json(mainVid)
-  console.log(mainVid)
+
 })
 
 
@@ -41,40 +41,65 @@ app.post('/mainVid', (req, res) => {
   })
 
 
-  app.post('/videos/:id', (req, res) => {
-    const { name, comment } = req.body
-   comments.push(
-  
-      {
-   name, 
-   comment
-      })
-    
-      res.json(comments)
-      console.log(comments)
-      console.log
-  
-    })
+
+
+
 
 
 app.get('/videos', (req, res) => {
   res.json(videos)
-  console.log(videos)
+
 })
 
 app.get('/videos/:id', (req, res) => {
  
   const checkStatus = mainVid.some(video => video.id === req.params.id);
-  console.log(checkStatus)
+
 
   if (checkStatus) {
     let test = mainVid.filter(video => video.id === req.params.id);
     res.json(test[0])
+  
   }
 
   else {console.log("notfound")}
 
 })
+
+
+app.get('/videos/:id/comments', (req, res) => {
+ 
+  const checkStatus = mainVid.some(video => video.id === req.params.id);
+
+console.log("here")
+  if (checkStatus) {
+    let test = mainVid.filter(video => video.id === req.params.id);
+    res.json(test[0].comments)
+    console.log(test[0].comments,"test2")
+  }
+
+  else {console.log("notfound")}
+
+})
+
+app.post('/videos/:id/comments', (req, res) => {
+  const { name,comment } = req.body
+  let test = mainVid.filter(video => video.id === req.params.id);
+  console.log(test, "ppppp")
+ test[0].comments.push(
+    {
+     name,
+     comment
+    }
+  )
+
+
+
+
+res.json(videos)
+
+})
+
 
 
 
@@ -90,6 +115,9 @@ app.post('/videos', (req, res) => {
       image
     }
   )
+
+
+
 
 res.json(videos)
 

@@ -46,12 +46,31 @@ class App extends React.Component {
 
 
 
+  axios.post(`/videos/${this.props.match.params.id}/comments`,
+    {
+            name: "nameVal",
+            comment: "commentVal"
+        })
+        .then(response => {
+
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
+        axios.get(`/videos/${this.props.match.params.id}/comments`)
+        .then(res => {
+            // this.setState({ students: res.data })
+            console.log(res.data, "potato")
+       
+        })
+
 
         axios.get('/videos')
             .then(res => {
                 // this.setState({ students: res.data })
                 this.setState({ content: res.data })
-                console.log(res.data, "sidevid")
+           
             })
 
 
@@ -60,7 +79,7 @@ class App extends React.Component {
             .then(res => {
                 // this.setState({ students: res.data })
                 this.setState({ currentvid: res.data, comments: res.data.comments })
-                console.log(res.data, "mainvid")
+             
            
             })
 
@@ -167,7 +186,7 @@ export default App;
 export function postInfo(nameVal, commentVal, idVal) {
 
 
-    axios.post(`/videos/${idVal}`,
+  axios.post(`/videos/${idVal}/comments`,
     {
             name: nameVal,
             comment: commentVal
@@ -178,6 +197,18 @@ export function postInfo(nameVal, commentVal, idVal) {
         .catch(error => {
             console.log(error);
         })
+        
+    // axios.post(`/videos/${idVal}/comments`,
+    // {
+    //         name: nameVal,
+    //         comment: commentVal
+    //     })
+    //     .then(response => {
+
+    //     })
+    //     .catch(error => {
+    //         console.log(error);
+    //     })
 
     // axios.post(`https://project-2-api.herokuapp.com/videos/${idVal}/comments/?api_key=` + api_key,
     //     {
