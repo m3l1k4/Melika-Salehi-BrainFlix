@@ -16,7 +16,11 @@ class App extends React.Component {
         comments: []
     }
 
-//handles comment submission
+
+
+
+
+    //handles comment submission
     handleSubmit = (event) => {
         event.preventDefault();
 
@@ -35,7 +39,7 @@ class App extends React.Component {
         postInfo("Mohan Muruge", commentVal, idVal);
         event.target.reset();
     }
-//axios API calls to get the video info
+    //axios API calls to get the video info
     componentDidMount() {
 
         // axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + api_key)
@@ -44,30 +48,34 @@ class App extends React.Component {
 
         //     })
 
+
+
+
+
         axios.get('/videos')
-        .then(res => {
-            // this.setState({ students: res.data })
-            this.setState({ content: res.data })
-            console.log(res.data, "sidevid")
-        })
+            .then(res => {
+                // this.setState({ students: res.data })
+                this.setState({ content: res.data })
+                console.log(res.data, "sidevid")
+            })
 
 
         console.log("before execution")
         axios.get(`/videos/${this.props.match.params.id}`)
-        .then(res => {
-            // this.setState({ students: res.data })
-            this.setState({ currentvid: res.data, comments:res.data.comments})
-            console.log(res.data, "mainvid")
-        })
+            .then(res => {
+                // this.setState({ students: res.data })
+                this.setState({ currentvid: res.data, comments: res.data.comments })
+                console.log(res.data, "mainvid")
+            })
 
 
-                axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
-                .then(res => {
-             
-                  
-                    console.log(res.data, "axios main")
-                })
-        
+        axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
+            .then(res => {
+
+
+                console.log(res.data, "axios main")
+            })
+
 
         // axios.get(`/videos/${this.props.match.params.id}`)
         // .then(res => this.setState({ currentvid: res.data, comments:res.data.comments })
@@ -80,12 +88,12 @@ class App extends React.Component {
 
 
 
- 
+
 
     }
 
 
-//handles the updating of nextVid list based on current vid being watched
+    //handles the updating of nextVid list based on current vid being watched
     componentDidUpdate(prevProps) {
 
         const indexID = this.state.content.findIndex(video => {
@@ -114,17 +122,17 @@ class App extends React.Component {
 
             //     })
 
-     axios.get(`/videos/${this.props.match.params.id}`)
-        .then(res => {
-            // this.setState({ students: res.data })
-            this.setState({ currentvid: res.data, comments:res.data.comments})
-            console.log(res.data, "in the")
-        })
+            axios.get(`/videos/${this.props.match.params.id}`)
+                .then(res => {
+                    // this.setState({ students: res.data })
+                    this.setState({ currentvid: res.data, comments: res.data.comments })
+                    console.log(res.data, "in the")
+                })
 
 
         }
 
-   
+
     }
 
     render() {
@@ -161,18 +169,33 @@ export default App;
 
 //handles posting to API comments
 export function postInfo(nameVal, commentVal, idVal) {
-    console.log(idVal,"hooo")
-    axios.post(`https://project-2-api.herokuapp.com/videos/${idVal}/comments/?api_key=` + api_key,
-        {
-            name: nameVal,
-            comment: commentVal
-        })
-        .then(response => {
 
-        })
-        .catch(error => {
-            console.log(error);
-        })
+
+    axios.post('/videos',
+    {
+        id:nameVal,
+        title:nameVal,
+        channel:nameVal,
+        image:nameVal
+    })
+    .then(response => {
+        console.log(response.data)
+    })
+    .catch(error => {
+        console.log(error);
+    })
+
+    // axios.post(`https://project-2-api.herokuapp.com/videos/${idVal}/comments/?api_key=` + api_key,
+    //     {
+    //         name: nameVal,
+    //         comment: commentVal
+    //     })
+    //     .then(response => {
+
+    //     })
+    //     .catch(error => {
+    //         console.log(error);
+    //     })
 
 };
 

@@ -7,6 +7,12 @@ import LandingPage from './LandingPage'
 
 const api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
 
+
+
+
+
+
+
 class App extends React.Component {
   render() {
     return (
@@ -17,7 +23,7 @@ class App extends React.Component {
         <NavBar />
             <Switch>
             <Route exact path="/upload" >
-              <UploadForm />
+              <UploadForm  />
             </Route>
             {/* components have been moved to a saparate LandingPage.js file to allow {..prop} application to nested divs. 
             solves the this.props.match is undefined error */}

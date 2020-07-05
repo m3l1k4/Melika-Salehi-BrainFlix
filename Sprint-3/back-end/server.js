@@ -8,6 +8,35 @@ const mainVid = require('./mainvid.json');
 
 app.use(bodyParser.json());
 
+app.get('/mainVid', (req, res) => {
+  res.json(mainVid)
+  console.log(mainVid)
+})
+
+
+app.post('/mainVid', (req, res) => {
+  const { id, title, channel,image,description
+  ,views, likes,duration,video,timestamp,comments } = req.body
+  mainVid.push(
+
+    {
+      id,
+      title,
+      channel,
+      image,
+      description,
+      views, 
+      likes,
+      duration,
+      video,
+      timestamp,
+      comments
+    })
+  
+    res.json(mainVid)
+
+  })
+
 
 
 app.get('/videos', (req, res) => {
@@ -25,30 +54,31 @@ app.get('/videos/:id', (req, res) => {
     res.json(test[0])
   }
 
+  else {console.log("notfound")}
+
 })
 
 
 
-// app.post('/students', (req, res) => {
-//   const { name, program, grade } = req.body
-//   students.push(
-//     {
-//       name,
-//       program,
-//       grade
-//     }
-//   )
-//   // res.json([
-//   //   ...students, 
-//   //   {
-//   //     name,
-//   //     program,
-//   //     grade
-//   //   }
-//   // ])
 
-// res.json(students)
 
-// })
+app.post('/videos', (req, res) => {
+  const { id, title, channel,image } = req.body
+  videos.push(
+    {
+      id,
+      title,
+      channel,
+      image
+    }
+  )
+
+res.json(videos)
+
+})
+
+
+
+
 
 app.listen(port, () => console.log(`Listening on ${port}`))
