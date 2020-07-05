@@ -14,9 +14,9 @@ export default function VidDescription({ info }) {
                 </div>
 
                 <div className="VidDesc__trendsInfo">
-                    <img src='/assets/Icons/SVG/Icon-views.svg' className="VidDesc__trendsInfo--icon" ></img>
+                    <img src='/assets/Icons/SVG/Icon-views.svg' className="VidDesc__trendsInfo--icon"  alt="views"></img>
                     <p className="VidDesc__trendsInfo--text" >{info.views}</p>
-                    <img src='/assets/Icons/SVG/Icon-likes.svg' className="VidDesc__trendsInfo--icon" ></img>
+                    <img src='/assets/Icons/SVG/Icon-likes.svg' className="VidDesc__trendsInfo--icon" alt="likes"></img>
                     <p className="VidDesc__trendsInfo--text">{info.likes}</p>
                 </div>
             </div>

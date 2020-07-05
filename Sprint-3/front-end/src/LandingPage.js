@@ -7,7 +7,7 @@ import CommentsList from './components/CommentsList'
 import VidDescription from './components/VidDescription'
 
 
-const api_key = "2ee60303-67d6-46f9-850a-5b06636bb301";
+
 
 class App extends React.Component {
     state = {
@@ -20,8 +20,8 @@ class App extends React.Component {
     //handles comment submission
     handleSubmit = (event) => {
         event.preventDefault();
- let idVal =  this.state.currentvid.id;
- let comId = String(new Date().getTime());
+        let idVal = this.state.currentvid.id;
+        let comId = String(new Date().getTime());
 
         this.setState({
             comments: [...this.state.currentvid.comments, {
@@ -32,8 +32,8 @@ class App extends React.Component {
             }]
         })
         let commentVal = event.target.newComment.value;
-       
-        postInfo("Mohan Muruge", commentVal, idVal,comId);
+
+        postInfo("Mohan Muruge", commentVal, idVal, comId);
         event.target.reset();
     }
 
@@ -52,7 +52,6 @@ class App extends React.Component {
             })
 
 
-        console.log("before execution")
         axios.get(`/videos/${this.props.match.params.id}`)
             .then(res => {
 
@@ -60,15 +59,6 @@ class App extends React.Component {
 
 
             })
-
-
-        axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
-            .then(res => {
-
-
-                console.log(res.data, "axios main")
-            })
-
 
     }
 
@@ -100,9 +90,9 @@ class App extends React.Component {
 
             axios.get(`/videos/${this.props.match.params.id}`)
                 .then(res => {
-                    // this.setState({ students: res.data })
+                
                     this.setState({ currentvid: res.data, comments: res.data.comments })
-                    console.log(res.data, "in the")
+                 
                 })
 
 
@@ -144,7 +134,7 @@ class App extends React.Component {
 export default App;
 
 //handles posting to API comments
-export function postInfo(nameVal, commentVal, idVal ,comId) {
+export function postInfo(nameVal, commentVal, idVal, comId) {
 
 
     axios.post(`/videos/${idVal}/comments`,

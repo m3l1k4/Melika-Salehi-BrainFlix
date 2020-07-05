@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link, Redirect, Switch, BrowserRouter as Router, BrowserRouter } from 'react-router-dom'
+import { Route, Redirect, Switch, BrowserRouter as Router } from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar'
 import UploadForm from './components/UploadForm'

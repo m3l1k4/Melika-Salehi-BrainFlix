@@ -47,6 +47,7 @@ export default function UploadForm({ handleUpload }) {
               axios.post('/mainVid',newUploadInfo )
               .then(console.log("uploaded"));
            
+              event.target.reset();
             };
 
 
@@ -60,7 +61,7 @@ export default function UploadForm({ handleUpload }) {
                 <div className="upload-video__form--body" >
                     <div className="upload-video__form--body__visual">
                         <p className="upload-video__form--body__visual--title">VIDEO THUMBNAIL </p>
-                        <img src='./assets/Images/Upload-video-preview.jpg' className="upload-video__form--body__visual--img"></img>
+                        <img src='./assets/Images/Upload-video-preview.jpg' className="upload-video__form--body__visual--img" alt="video preview"></img>
                     </div>
                     <div className="upload-video__form--body__field">
                         <p className="upload-video__form--body__field--title">TITLE YOUR VIDEO</p>
