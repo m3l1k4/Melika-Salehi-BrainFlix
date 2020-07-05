@@ -3,8 +3,8 @@ const app = express()
 const port = process.env.PORT || process.argv[2] || 8080
 const bodyParser = require('body-parser')
 
-const videos = require('./sidevid.json');
-const mainVid = require('./mainvid.json');
+const videos = require('./API/sidevid.json');
+const mainVid = require('./API/mainvid.json');
 
 app.use(bodyParser.json());
 
