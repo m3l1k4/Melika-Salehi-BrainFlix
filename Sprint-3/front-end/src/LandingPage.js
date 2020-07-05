@@ -24,7 +24,6 @@ class App extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        console.log(this.state.currentvid.comments, "potato")
 
         this.setState({
             comments: [...this.state.currentvid.comments, {
@@ -39,15 +38,11 @@ class App extends React.Component {
         postInfo("Mohan Muruge", commentVal, idVal);
         event.target.reset();
     }
+
+
+
     //axios API calls to get the video info
     componentDidMount() {
-
-        // axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + api_key)
-        //     .then(res => {
-        //         this.setState({ content: res.data })
-
-        //     })
-
 
 
 
@@ -66,6 +61,7 @@ class App extends React.Component {
                 // this.setState({ students: res.data })
                 this.setState({ currentvid: res.data, comments: res.data.comments })
                 console.log(res.data, "mainvid")
+           
             })
 
 
@@ -171,19 +167,17 @@ export default App;
 export function postInfo(nameVal, commentVal, idVal) {
 
 
-    axios.post('/videos',
+    axios.post(`/videos/${idVal}`,
     {
-        id:nameVal,
-        title:nameVal,
-        channel:nameVal,
-        image:nameVal
-    })
-    .then(response => {
-        console.log(response.data)
-    })
-    .catch(error => {
-        console.log(error);
-    })
+            name: nameVal,
+            comment: commentVal
+        })
+        .then(response => {
+
+        })
+        .catch(error => {
+            console.log(error);
+        })
 
     // axios.post(`https://project-2-api.herokuapp.com/videos/${idVal}/comments/?api_key=` + api_key,
     //     {

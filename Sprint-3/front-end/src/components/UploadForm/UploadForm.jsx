@@ -31,11 +31,11 @@ export default function UploadForm({ handleUpload }) {
                 video: "",
                 timestamp: 1531007012000,
                 comments:[  {
-                    "name": "Micheal Lyons",
-                    "comment": "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of acconcert I have EVER witnessed.",
-                    "id": "1ab6d9f6-da38-456e-9b09-ab0acd9ce818",
-                    "likes": 0,
-                    "timestamp": 1545162149000
+                    name: "Micheal Lyons",
+                    comment: "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of acconcert I have EVER witnessed.",
+                    id: "1ab6d9f6-da38-456e-9b09-ab0acd9ce818",
+                    likes: 0,
+                    timestamp: 1545162149000
                 }]
               };
             
@@ -46,6 +46,7 @@ export default function UploadForm({ handleUpload }) {
 
               axios.post('/mainVid',newUploadInfo )
               .then(console.log("uploaded"));
+           
             };
 
 

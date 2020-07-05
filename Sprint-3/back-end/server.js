@@ -8,6 +8,9 @@ const mainVid = require('./mainvid.json');
 
 app.use(bodyParser.json());
 
+
+
+
 app.get('/mainVid', (req, res) => {
   res.json(mainVid)
   console.log(mainVid)
@@ -37,6 +40,21 @@ app.post('/mainVid', (req, res) => {
 
   })
 
+
+  app.post('/videos/:id', (req, res) => {
+    const { name, comment } = req.body
+   comments.push(
+  
+      {
+   name, 
+   comment
+      })
+    
+      res.json(comments)
+      console.log(comments)
+      console.log
+  
+    })
 
 
 app.get('/videos', (req, res) => {
@@ -76,6 +94,9 @@ app.post('/videos', (req, res) => {
 res.json(videos)
 
 })
+
+
+
 
 
 
