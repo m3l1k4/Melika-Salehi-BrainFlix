@@ -20,19 +20,20 @@ class App extends React.Component {
     //handles comment submission
     handleSubmit = (event) => {
         event.preventDefault();
-
+ let idVal =  this.state.currentvid.id;
+ let comId = String(new Date().getTime());
 
         this.setState({
             comments: [...this.state.currentvid.comments, {
-                id: this.state.currentvid.id,
+                id: comId,
                 name: "Mohan Muruge",
                 comment: event.target.newComment.value,
                 timestamp: Date()
             }]
         })
         let commentVal = event.target.newComment.value;
-        let idVal = this.state.currentvid.id;
-        postInfo("Mohan Muruge", commentVal, idVal);
+       
+        postInfo("Mohan Muruge", commentVal, idVal,comId);
         event.target.reset();
     }
 
@@ -143,13 +144,15 @@ class App extends React.Component {
 export default App;
 
 //handles posting to API comments
-export function postInfo(nameVal, commentVal, idVal) {
+export function postInfo(nameVal, commentVal, idVal ,comId) {
 
 
     axios.post(`/videos/${idVal}/comments`,
         {
             name: nameVal,
-            comment: commentVal
+            comment: commentVal,
+            id: comId,
+            timestamp: new Date().getTime()
         })
         .then(response => {
 
