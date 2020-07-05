@@ -38,25 +38,40 @@ class App extends React.Component {
 //axios API calls to get the video info
     componentDidMount() {
 
-        axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + api_key)
-            .then(res => {
-                this.setState({ content: res.data })
+        // axios.get("https://project-2-api.herokuapp.com/videos?api_key=" + api_key)
+        //     .then(res => {
+        //         this.setState({ content: res.data })
 
-            })
+        //     })
 
-        axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
-            .then(res => this.setState({ currentvid: res.data, comments:res.data.comments })
-            )
+        axios.get('/sideVideoInfo')
+        .then(res => {
+            // this.setState({ students: res.data })
+            this.setState({ content: res.data })
+            console.log(res.data, "sidevid")
+        })
+
+
+        console.log("before execution")
+        axios.get('/videos')
+        .then(res => {
+            // this.setState({ students: res.data })
+          
+            console.log(res.data, "mainvid")
+        })
+
+        axios.get(`/videos/${this.props.match.params.id}`)
+        .then(res => this.setState({ currentvid: res.data, comments:res.data.comments })
+        )
+
+        // axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
+        //     .then(res => this.setState({ currentvid: res.data, comments:res.data.comments })
+        //     )
 
 
 
 
-         
-    axios.get('/students')
-    .then(res => {
-        // this.setState({ students: res.data })
-        console.log(res.data, "potato")
-    })
+ 
 
     }
 
