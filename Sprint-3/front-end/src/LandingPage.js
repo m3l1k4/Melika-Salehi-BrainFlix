@@ -44,7 +44,7 @@ class App extends React.Component {
 
         //     })
 
-        axios.get('/sideVideoInfo')
+        axios.get('/videos')
         .then(res => {
             // this.setState({ students: res.data })
             this.setState({ content: res.data })
@@ -53,16 +53,25 @@ class App extends React.Component {
 
 
         console.log("before execution")
-        axios.get('/videos')
+        axios.get(`/videos/${this.props.match.params.id}`)
         .then(res => {
             // this.setState({ students: res.data })
-          
+            this.setState({ currentvid: res.data, comments:res.data.comments})
             console.log(res.data, "mainvid")
         })
 
-        axios.get(`/videos/${this.props.match.params.id}`)
-        .then(res => this.setState({ currentvid: res.data, comments:res.data.comments })
-        )
+
+                axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
+                .then(res => {
+             
+                  
+                    console.log(res.data, "axios main")
+                })
+        
+
+        // axios.get(`/videos/${this.props.match.params.id}`)
+        // .then(res => this.setState({ currentvid: res.data, comments:res.data.comments })
+        // )
 
         // axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
         //     .then(res => this.setState({ currentvid: res.data, comments:res.data.comments })
@@ -99,14 +108,23 @@ class App extends React.Component {
         this.state.content.splice(indexID, 1)
 
         if (this.props.match.params.id !== prevProps.match.params.id) {
-            axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
-                .then(res => {
-                    this.setState({ currentvid: res.data, comments:res.data.comments })
+            // axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.match.params.id}/?api_key=` + api_key)
+            //     .then(res => {
+            //         this.setState({ currentvid: res.data, comments:res.data.comments })
 
-                })
+            //     })
+
+     axios.get(`/videos/${this.props.match.params.id}`)
+        .then(res => {
+            // this.setState({ students: res.data })
+            this.setState({ currentvid: res.data, comments:res.data.comments})
+            console.log(res.data, "in the")
+        })
+
 
         }
 
+   
     }
 
     render() {
