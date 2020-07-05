@@ -45,19 +45,19 @@ class App extends React.Component {
 
         axios.get('/videos')
             .then(res => {
-         
+
                 this.setState({ content: res.data })
-           
+
             })
 
 
         console.log("before execution")
         axios.get(`/videos/${this.props.match.params.id}`)
             .then(res => {
-            
+
                 this.setState({ currentvid: res.data, comments: res.data.comments })
-             
-           
+
+
             })
 
 
@@ -146,8 +146,8 @@ export default App;
 export function postInfo(nameVal, commentVal, idVal) {
 
 
-  axios.post(`/videos/${idVal}/comments`,
-    {
+    axios.post(`/videos/${idVal}/comments`,
+        {
             name: nameVal,
             comment: commentVal
         })

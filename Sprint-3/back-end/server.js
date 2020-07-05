@@ -8,9 +8,6 @@ const mainVid = require('./mainvid.json');
 
 app.use(bodyParser.json());
 
-
-
-
 app.get('/mainVid', (req, res) => {
   res.json(mainVid)
 
@@ -18,8 +15,8 @@ app.get('/mainVid', (req, res) => {
 
 
 app.post('/mainVid', (req, res) => {
-  const { id, title, channel,image,description
-  ,views, likes,duration,video,timestamp,comments } = req.body
+  const { id, title, channel, image, description
+    , views, likes, duration, video, timestamp, comments } = req.body
   mainVid.push(
 
     {
@@ -28,22 +25,17 @@ app.post('/mainVid', (req, res) => {
       channel,
       image,
       description,
-      views, 
+      views,
       likes,
       duration,
       video,
       timestamp,
       comments
     })
-  
-    res.json(mainVid)
 
-  })
+  res.json(mainVid)
 
-
-
-
-
+})
 
 
 app.get('/videos', (req, res) => {
@@ -52,61 +44,55 @@ app.get('/videos', (req, res) => {
 })
 
 app.get('/videos/:id', (req, res) => {
- 
+
   const checkStatus = mainVid.some(video => video.id === req.params.id);
 
 
   if (checkStatus) {
     let test = mainVid.filter(video => video.id === req.params.id);
     res.json(test[0])
-  
+
   }
 
-  else {console.log("notfound")}
+  else { console.log("notfound") }
 
 })
 
 
 app.get('/videos/:id/comments', (req, res) => {
- 
+
   const checkStatus = mainVid.some(video => video.id === req.params.id);
 
-console.log("here")
+
   if (checkStatus) {
     let test = mainVid.filter(video => video.id === req.params.id);
     res.json(test[0].comments)
-    console.log(test[0].comments,"test2")
+
   }
 
-  else {console.log("notfound")}
+  else { console.log("notfound") }
 
 })
 
 app.post('/videos/:id/comments', (req, res) => {
-  const { name,comment } = req.body
+  const { name, comment } = req.body
   let test = mainVid.filter(video => video.id === req.params.id);
-  console.log(test, "ppppp")
- test[0].comments.push(
+
+  test[0].comments.push(
     {
-     name,
-     comment
+      name,
+      comment
     }
   )
 
-
-
-
-res.json(videos)
+  res.json(videos)
 
 })
 
 
 
-
-
-
 app.post('/videos', (req, res) => {
-  const { id, title, channel,image } = req.body
+  const { id, title, channel, image } = req.body
   videos.push(
     {
       id,
@@ -119,7 +105,7 @@ app.post('/videos', (req, res) => {
 
 
 
-res.json(videos)
+  res.json(videos)
 
 })
 
